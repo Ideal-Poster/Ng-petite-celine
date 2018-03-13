@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+  <h1 mat-dialog-title>Join Petite Celine World!</h1>
+  <p>Enter your email to get updates on news dates and more</p>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        id="email"
+        class="form-control"
+        ngModel
+        name="email"
+        required
+        email
+        #email="ngModel"
+        placeholder="Email">
+      </mat-form-field>
+  </div>
+
+
+  <div mat-dialog-actions>
+    <button
+      mat-button>No, Thanks</button>
+    <button
+      mat-button
+      cdkFocusInitial
+      type="submit">Subscribe</button>
+  </div>
+
+</form>
