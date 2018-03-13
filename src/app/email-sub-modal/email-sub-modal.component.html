@@ -1,13 +1,12 @@
 <form (ngSubmit)="onSubmit()" #f="ngForm">
-  <h1 mat-dialog-title>Join Petite Celine World!</h1>
-  <p>Enter your email to get updates on news dates and more</p>
+  <h1 mat-dialog-title>Join Petite Celine World</h1>
+  <p>Enter your email to get on news dates and more!</p>
   <div mat-dialog-content>
-    <mat-form-field>
+    <mat-form-field class="modal-form-field">
       <input
         matInput
         type="text"
         id="email"
-        class="form-control"
         ngModel
         name="email"
         required
@@ -15,16 +14,20 @@
         #email="ngModel"
         placeholder="Email">
       </mat-form-field>
+      <br>
+      <span style="font-size:12px;"*ngIf="!email.valid && email.touched">Enter a valid email adress</span>
+
   </div>
 
 
-  <div mat-dialog-actions>
+  <div class="buttons" mat-dialog-actions>
     <button
       mat-button>No, Thanks</button>
     <button
-      mat-button
+      mat-raised-button
       cdkFocusInitial
-      type="submit">Subscribe</button>
+      type="submit"
+      [disabled]="!f.valid">Subscribe</button>
   </div>
 
 </form>

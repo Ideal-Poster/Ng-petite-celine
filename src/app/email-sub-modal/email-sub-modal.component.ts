@@ -11,6 +11,9 @@ import { MatDialogRef, MAT_DIALOG_DATA }  from "@angular/material";
     .modal-form-field {
       width: 100%;
     }
+    .buttons {
+      padding-bottom: 30px;
+    }
     `]
 })
 export class EmailSubModalComponent {
