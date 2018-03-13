@@ -28,10 +28,10 @@ export class EmailSubModalComponent {
   }
 
   getList() {
-    this.mailChimp.getList()
-      .subscribe(list => {
-        console.log(list)
-      });
+    // this.mailChimp.getList()
+    //   .subscribe(list => {
+    //     console.log(list)
+    //   });
   }
 
   onSubmit() {
