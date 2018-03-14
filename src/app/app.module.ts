@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
+import { firebaseConfig } from "../environments/firebase.config";
 
 import { AppComponent } from './app.component';
 import { EmailSubModalComponent } from './email-sub-modal/email-sub-modal.component';
 import { HomeComponent } from './home/home.component';
-
-import { FormsModule } from '@angular/forms';
-import { MaterialModule } from "./material/material.module";
-import { HttpClientModule } from "@angular/common/http";
 import { HttpErrorHandler } from "../http-error-handler.service";
+import { MailChimpApiService } from "./services/mail-chimp-api.service";
+import { MaterialModule } from "./material/material.module";
 import { MessageService } from "../message.service";
 
-import { MailChimpApiService } from "./services/mail-chimp-api.service";
-
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,9 @@ import { MailChimpApiService } from "./services/mail-chimp-api.service";
     FormsModule,
     BrowserModule,
     MaterialModule,
-    HttpClientModule
-
+    HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [
     MailChimpApiService,

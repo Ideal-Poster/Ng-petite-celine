@@ -1,6 +1,11 @@
+
 import { Component } from '@angular/core';
-import { MailChimpApiService } from "./services/mail-chimp-api.service";
+import { Observable } from 'rxjs';
 import { initializeApp, database } from "firebase";
+
+import { AngularFirestore,AngularFirestoreCollection } from 'angularfire2/firestore';
+import { MailChimpApiService } from "./services/mail-chimp-api.service";
+
 
 @Component({
   selector: 'app-root',
@@ -9,27 +14,13 @@ import { initializeApp, database } from "firebase";
   providers: [MailChimpApiService]
 })
 export class AppComponent {
-  title = 'app';
-
-  constructor() {
-
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBbnBsnG-nkNirLzcMw_LQw3VdVN3Y_WeY",
-      authDomain: "petite-celine.firebaseapp.com",
-      databaseURL: "https://petite-celine.firebaseio.com",
-      projectId: "petite-celine",
-      storageBucket: "petite-celine.appspot.com",
-      messagingSenderId: "748301447984"
-    };
-    initializeApp(config);
-
-    var root = database().ref();
-
-    root.on('value', function(snap) {
-      console.log(snap.val());
-    });
-
-
+  private coursesCollection: AngularFirestoreCollection<any>;
+  courses$: Observable<any>;
+  constructor(db: AngularFirestore) {
+    this.coursesCollection = db.collection<any>('courses');
+    this.courses$ = this.coursesCollection.valueChanges();
+      console.log(this.courses$.subscribe(
+      val => console.log(val)
+    ));
   }
 }
