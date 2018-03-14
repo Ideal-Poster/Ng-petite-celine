@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   openDialog(): void {
     let dialogRef = this.dialog.open(EmailSubModalComponent, {
-      width: '500px',
+      width: '580px',
       data: { email: this.email }
     })
 

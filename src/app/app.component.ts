@@ -1,11 +1,9 @@
-
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { initializeApp, database } from "firebase";
 
-import { AngularFirestore,AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { MailChimpApiService } from "./services/mail-chimp-api.service";
-
 
 @Component({
   selector: 'app-root',
@@ -19,7 +17,7 @@ export class AppComponent {
   constructor(db: AngularFirestore) {
     this.coursesCollection = db.collection<any>('courses');
     this.courses$ = this.coursesCollection.valueChanges();
-      console.log(this.courses$.subscribe(
+    console.log(this.courses$.subscribe(
       val => console.log(val)
     ));
   }

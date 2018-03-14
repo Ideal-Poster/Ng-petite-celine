@@ -9,15 +9,15 @@ export class MailChimpApiService {
   private handleError: HandleError;
 
   constructor(private http: HttpClient,
-              httpErrorHandler: HttpErrorHandler) {
-                this.handleError = httpErrorHandler.createHandleError('getList')
-                console.log('ApiService is Ready...')
-              }
+    httpErrorHandler: HttpErrorHandler) {
+    this.handleError = httpErrorHandler.createHandleError('getList')
+    console.log('ApiService is Ready...')
+  }
 
   getList() {
     return this.http.get('https://us17.api.mailchimp.com/3.0/lists/c760b1311e/members')
-    .pipe(
+      .pipe(
       catchError(this.handleError('getList', []))
-    );
+      );
   }
 }

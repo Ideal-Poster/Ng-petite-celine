@@ -4,7 +4,8 @@ import {
   MatDialogModule,
   MatDialogConfig,
   MatInputModule,
-  MatButtonModule } from '@angular/material';
+  MatButtonModule
+} from '@angular/material';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -25,10 +26,10 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [
   ],
-  entryComponents:[
+  entryComponents: [
     EmailSubModalComponent
   ],
-  providers:[
+  providers: [
     // {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
   ]
 })

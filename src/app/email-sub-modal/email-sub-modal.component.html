@@ -7,27 +7,21 @@
         matInput
         type="text"
         id="email"
-        ngModel
-        name="email"
+        ngModel name="email"
         required
         email
         #email="ngModel"
         placeholder="Email Address">
-      </mat-form-field>
-      <br>
-      <span style="font-size:12px;"*ngIf="!email.valid && email.touched">Enter a valid email adress</span>
-
+    </mat-form-field>
+    <br>
+    <span style="font-size:12px;" *ngIf="!email.valid && email.touched">Enter a valid email adress</span>
   </div>
-
-
   <div class="buttons" mat-dialog-actions>
-    <button
-      mat-button>No, Thanks</button>
+    <button mat-button>No, Thanks</button>
     <button
       mat-raised-button
       cdkFocusInitial
       type="submit"
       [disabled]="!f.valid">Subscribe</button>
   </div>
-
 </form>
