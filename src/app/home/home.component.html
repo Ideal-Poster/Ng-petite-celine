@@ -66,4 +66,24 @@
       <h2 class="description">ADDRESS: Arlenes Grocery, 95 Stanton St, New York, NY 10002</h2>
     </div>
   </div>
+
+  <div class="segment offset-sm-1 col-sm-11 col-lg-8 ">
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Petite Celine Résumé
+        </mat-panel-title>
+
+        <mat-panel-description style="margin:auto">
+          Click to {{ panelOpenState ? 'Open' : 'Close' }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <iframe src="../assets/celine-acting-resume.pdf#view=Fit&statusbar=0" style="width:100%; height:600px" frameborder="0" align="top"></iframe>
+      <a  href="../assets/celine-acting-resume.pdf" class="text-right" download>
+        <p style="padding-top: 20px; color:black">Download</p>
+      </a>
+    </mat-expansion-panel>
+  </div>
+
 </div>

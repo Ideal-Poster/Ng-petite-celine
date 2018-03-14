@@ -9,6 +9,7 @@ import { EmailSubModalComponent } from './email-sub-modal/email-sub-modal.compon
 import { HomeComponent } from './home/home.component';
 import { HttpErrorHandler } from "../http-error-handler.service";
 import { MailChimpApiService } from "./services/mail-chimp-api.service";
+
 import { MaterialModule } from "./material/material.module";
 import { MessageService } from "../message.service";
 

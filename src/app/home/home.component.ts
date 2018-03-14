@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material";
 import { EmailSubModalComponent } from "../email-sub-modal/email-sub-modal.component";
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 @Component({
   selector: 'app-home',
@@ -9,9 +11,10 @@ import { EmailSubModalComponent } from "../email-sub-modal/email-sub-modal.compo
 })
 export class HomeComponent implements OnInit {
   email: string;
+  panelOpenState: boolean = false;
 
   constructor(public dialog: MatDialog) {
-    this.openDialog();
+    // this.openDialog();
   }
 
   openDialog(): void {

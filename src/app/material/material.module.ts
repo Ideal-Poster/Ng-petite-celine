@@ -4,7 +4,8 @@ import {
   MatDialogModule,
   MatDialogConfig,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatExpansionModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -16,13 +17,15 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     MatDialogModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   exports: [
     BrowserAnimationsModule,
     MatDialogModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   declarations: [
   ],
