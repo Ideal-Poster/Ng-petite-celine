@@ -1,9 +1,11 @@
 import { Component, Inject, ViewChild  } from '@angular/core';
-import { HomeComponent } from "../home/home.component";
+import { HomeComponent } from '../home/home.component';
 import { NgForm } from '@angular/forms';
 
-import { MatDialogRef, MAT_DIALOG_DATA }  from "@angular/material";
-import { MailChimpApiService } from "../services/mail-chimp-api.service";
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MailChimpApiService } from '../services/mail-chimp-api.service';
+import { EmailSubscriber } from '../models/emailSubscriber';
+
 
 @Component({
   selector: 'app-email-sub-modal',
@@ -24,7 +26,7 @@ export class EmailSubModalComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private mailChimp: MailChimpApiService
   ) {
-    this.getList()
+    this.getList();
   }
 
   getList() {
@@ -35,7 +37,12 @@ export class EmailSubModalComponent {
   }
 
   onSubmit() {
-    console.log(this.subform);
+    const subscriber = new EmailSubscriber(this.subform.value.firstname, this.subform.value.latname, this.subform.value.email);
+    this.mailChimp.addSubscriber(subscriber)
+      .subscribe(
+        data => console.log(data),
+        error => console.error(error)
+      );
   }
 
   onNoClick(): void {

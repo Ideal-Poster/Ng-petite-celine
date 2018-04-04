@@ -11,17 +11,17 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class HomeComponent implements OnInit {
   email: string;
-  panelOpenState: boolean = false;
+  panelOpenState = false;
 
   constructor(public dialog: MatDialog) {
-    // this.openDialog();
+    this.openDialog();
   }
 
   openDialog(): void {
-    let dialogRef = this.dialog.open(EmailSubModalComponent, {
+    const dialogRef = this.dialog.open(EmailSubModalComponent, {
       width: '580px',
       data: { email: this.email }
-    })
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
