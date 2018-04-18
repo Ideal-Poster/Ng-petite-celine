@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   panelOpenState = false;
 
   constructor(public dialog: MatDialog) {
-    this.openDialog();
+    // this.openDialog();
   }
 
   openDialog(): void {

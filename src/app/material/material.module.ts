@@ -1,5 +1,5 @@
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { EmailSubModalComponent } from "../email-sub-modal/email-sub-modal.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmailSubModalComponent } from '../email-sub-modal/email-sub-modal.component';
 import {
   MatDialogModule,
   MatDialogConfig,

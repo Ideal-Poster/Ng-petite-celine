@@ -33,10 +33,10 @@
   color: white;
   text-align: center;
   margin: 20px 0px 0px 0px;
-  color: pink;
+  color: peachpuff;
   opacity: 0.9;
-  font-family: 'Oswald', sans-serif;
-  font-size: 24px;
+  /* font-family: 'Oswald', sans-serif; */
+  font-size: 26px;
   font-style: normal;
   font-variant: normal;
   font-weight: 100;
@@ -61,9 +61,9 @@
 
 .description {
   color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  font-weight: 300;
+  /* font-family: 'Oswald', sans-serif; */
+  font-size: 26px;
+  /* font-weight: 100; */
   margin: 10px 40px 40px 0px;
   text-align: left;
   letter-spacing: 1px;
