@@ -1,5 +1,5 @@
 import { Component, Inject, ViewChild  } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
+import { MusicPageComponent } from '../music-page/music-page.component';
 import { NgForm } from '@angular/forms';
 
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
