@@ -10,14 +10,7 @@ import { EmailSubscriber } from '../models/emailSubscriber';
 @Component({
   selector: 'app-email-sub-modal',
   templateUrl: './email-sub-modal.component.html',
-  styles: [`
-    .modal-form-field {
-      width: 100%;
-    }
-    .buttons {
-      padding-bottom: 30px;
-    }
-    `]
+  styleUrls: ['./email-sub-modal.component.css']
 })
 export class EmailSubModalComponent {
   @ViewChild('f') subform: NgForm;

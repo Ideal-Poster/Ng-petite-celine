@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  border-width: 5.415px;
+  border-color: rgb(164, 149, 92);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  padding:  40px 90px 40px 90px;
+}
+.modal-form-field {
+  width: 100%;
+}
+.buttons {
+  padding-bottom: 30px;
+}
+.title {
+  font-family: "Greycliff-Regular";
+  font-size: 44px;
+  color: rgb(26, 20, 32);
+  line-height: 1;
+  text-align: center;
+}
+

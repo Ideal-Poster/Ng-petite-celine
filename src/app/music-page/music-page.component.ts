@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { EmailSubModalComponent } from '../email-sub-modal/email-sub-modal.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { delay, timeout } from 'q';
+import { Timeouts } from 'selenium-webdriver';
+import { TimeInterval } from 'rxjs/operators/timeInterval';
 
 
 @Component({
@@ -14,8 +17,8 @@ export class MusicPageComponent implements OnInit {
   panelOpenState = false;
 
   constructor(public dialog: MatDialog) {
-    // this.openDialog();
   }
+
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EmailSubModalComponent, {
@@ -30,6 +33,9 @@ export class MusicPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.openDialog();
+    }, 2000);
   }
 
 }

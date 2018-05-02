@@ -97,6 +97,7 @@ h2 {
   width: 154.862px;
   height: 32.862px;
   margin-top: 34px;
+  margin-left: 22px;
 }
 
 .tickets {
@@ -113,4 +114,5 @@ h2 {
   height: 35px;
   right: 35px;
   top: 3px;
+  vertical-align: baseline;
 }
