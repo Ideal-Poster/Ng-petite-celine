@@ -1,0 +1,116 @@
+:host {
+  display: block;
+  color: #e0dce0;
+  font-family: 'Greycliff-Regular';
+
+}
+.bkground {
+  background: url("../../assets/celine-portrait.png")no-repeat 50% 50%;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  padding-bottom: 60px;
+  height: 100vh;
+  min-height: 800px;
+  max-height: 880px;
+}
+h2 {
+  font-size: 44px;
+  font-family: 'Cardo', serif;
+  padding-bottom: 13px;
+}
+:host /deep/ ul {
+  color: #75707a;
+}
+.album {
+  padding-top: 100px;
+}
+.tracks {
+  padding-bottom: 3px;
+}
+.featured-video {
+  padding-right: 56px;
+}
+.video {
+  padding-top: 35px;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.purchase-icons {
+  margin-top: 15px;
+  margin-left: 0px;
+}
+.purchase-icons > i {
+  font-size: 20px;
+  vertical-align: bottom;
+}
+.purchase-icons > p {
+  font-size: 16px;
+  padding-right: 15px;
+}
+.purchase-icons > .icons > * {
+  margin-right: 10px;
+}
+.purchase-icons > p,
+.purchase-icons > .icons > * {
+  color: #a4955c;
+}
+.events-section {
+  padding: 90px 10px;
+  border: 10px solid white;
+  background: #1c1820;
+  height: 620px;
+}
+.events-banner {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 47px;
+  font-family: 'Greycliff-Medium';
+  height: 500px;
+}
+.event {
+  font-family: 'Greycliff-Light';
+  line-height: 18px;
+}
+.event > .venue {
+  font-size: 39px;
+}
+.button {
+  border-width: 1.569px;
+  border-color: rgb(224, 220, 224);
+  border-style: solid;
+  border-radius: 5px;
+  width: 154.862px;
+  height: 32.862px;
+  margin-top: 34px;
+}
+
+.tickets {
+  font-size: 22px;
+  width: 67px;
+  height: 8px;
+  margin: auto;
+  margin-top: -2px;
+}
+.rectangle {
+  position: relative;
+  background-color: rgb(85, 170, 160);
+  width: 8px;
+  height: 35px;
+  right: 35px;
+  top: 3px;
+}

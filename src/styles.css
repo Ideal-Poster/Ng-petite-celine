@@ -1,19 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css?family=Cardo');
-
-/*
-.container {
-  max-width: 1000px;
-} */
-
-.bkground {
-  background: url("./assets/celine-portrait.png")no-repeat 50% 50% fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  font-family: 'Khula', sans-serif;
-  padding-bottom: 60px;
+@font-face {
+  font-family: Greycliff-Medium;
+  src: url('assets/fonts/GreycliffCF-Medium.ttf');
+}
+@font-face {
+  font-family: Greycliff-Regular;
+  src: url('assets/fonts/GreycliffCF-Regular.ttf');
+}
+@font-face {
+  font-family: Greycliff-Light;
+  src: url('assets/fonts/GreycliffCF-Light.ttf');
 }
 
