@@ -17,13 +17,15 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { MusicPageComponent } from './music-page/music-page.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { ArtPageComponent } from './art-page/art-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmailSubModalComponent,
     MusicPageComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    ArtPageComponent
   ],
   imports: [
     FormsModule,

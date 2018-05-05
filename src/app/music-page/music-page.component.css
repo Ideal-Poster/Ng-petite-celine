@@ -1,8 +1,7 @@
 :host {
   display: block;
-  color: #e0dce0;
-  font-family: 'Greycliff-Regular';
-
+  /* color: #e0dce0;
+  font-family: 'Greycliff-Regular'; */
 }
 .bkground {
   background: url("../../assets/celine-portrait.png")no-repeat 50% 50%;
