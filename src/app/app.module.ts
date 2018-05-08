@@ -1,16 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { firebaseConfig } from '../environments/firebase.config';
 
 import { AppComponent } from './app.component';
-import { EmailSubModalComponent } from './email-sub-modal/email-sub-modal.component';
 
 import { HttpErrorHandler } from '../http-error-handler.service';
 import { MailChimpApiService } from './services/mail-chimp-api.service';
 
-import { MaterialModule } from './material/material.module';
 import { MessageService } from '../message.service';
 
 import { AngularFireModule } from 'angularfire2';
@@ -22,7 +21,6 @@ import { ArtPageComponent } from './art-page/art-page.component';
 @NgModule({
   declarations: [
     AppComponent,
-    EmailSubModalComponent,
     MusicPageComponent,
     NavMenuComponent,
     ArtPageComponent
@@ -30,11 +28,12 @@ import { ArtPageComponent } from './art-page/art-page.component';
   imports: [
     FormsModule,
     BrowserModule,
-    MaterialModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MDBBootstrapModule.forRoot()
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     MailChimpApiService,
     HttpErrorHandler,

@@ -1,11 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
-import { EmailSubModalComponent } from '../email-sub-modal/email-sub-modal.component';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { delay, timeout } from 'q';
-import { Timeouts } from 'selenium-webdriver';
-import { TimeInterval } from 'rxjs/operators/timeInterval';
-
+import { MDBBootstrapModule, ModalDirective } from 'angular-bootstrap-md';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-music-page',
@@ -13,29 +7,14 @@ import { TimeInterval } from 'rxjs/operators/timeInterval';
   styleUrls: ['./music-page.component.css']
 })
 export class MusicPageComponent implements OnInit {
-  email: string;
-  panelOpenState = false;
+  // @ViewChild('autoShownModal') public autoShownModal: ModalDirective;
+  public isModalShown = true;
 
-  constructor(public dialog: MatDialog) {
-  }
-
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(EmailSubModalComponent, {
-      width: '580px',
-      data: { email: this.email }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.email = result;
-    });
-  }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.openDialog();
-    }, 2000);
+    // mailModal.show()
   }
+
+
 
 }

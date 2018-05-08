@@ -1,7 +1,14 @@
 :host {
   display: block;
-  /* color: #e0dce0;
-  font-family: 'Greycliff-Regular'; */
+}
+.mail-modal {
+  margin-top: 20vh;
+  border-width: 5.5px;
+  border-color: rgb(164, 149, 92);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  font-family: "Greycliff-Regular";
+  color: #1c1820;
 }
 .bkground {
   background: url("../../assets/celine-portrait.png")no-repeat 50% 50%;
@@ -11,9 +18,7 @@
   -o-background-size: cover;
   -webkit-background-size: cover;
   padding-bottom: 60px;
-  height: 100vh;
-  min-height: 800px;
-  max-height: 880px;
+  min-height: 100vh;
 }
 h2 {
   font-size: 44px;
