@@ -1,4 +1,4 @@
-import { MDBBootstrapModule, ModalDirective } from 'angular-bootstrap-md';
+// import { MDBBootstrapModule, ModalDirective } from 'angular-bootstrap-md';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({

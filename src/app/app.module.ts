@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+
+
 import { firebaseConfig } from '../environments/firebase.config';
 
 import { AppComponent } from './app.component';
@@ -18,6 +21,9 @@ import { MusicPageComponent } from './music-page/music-page.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ArtPageComponent } from './art-page/art-page.component';
 
+import { MDBBootstrapModules } from 'ng-mdb-pro';
+import { MDBSpinningPreloader } from 'ng-mdb-pro';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,16 +34,18 @@ import { ArtPageComponent } from './art-page/art-page.component';
   imports: [
     FormsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModules.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     MailChimpApiService,
     HttpErrorHandler,
-    MessageService
+    MessageService,
+    MDBSpinningPreloader
   ],
   bootstrap: [AppComponent]
 })
