@@ -1,7 +1,13 @@
 <div class="container">
 
   <div class="row">
-    <mdb-image-modal [modalImages]="imagesBasic" type="no-margin"></mdb-image-modal>
+    <div class="col-sm-4 teal darken-4">
+      <app-nav-menu></app-nav-menu>
+    </div>
+
+    <div style="padding-top: 20vh;" class="col-sm-8">
+      <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
+    </div>
   </div>
 
 </div>

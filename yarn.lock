@@ -4520,6 +4520,10 @@ next-tick@1:
   version "6.0.2"
   resolved "git+https://oauth2:UkVgW1esr64ozz7iqLci@git.mdbootstrap.com/mdb/angular/ng-pro.git#ad636a533433947a0b723a254afd892a59a50e43"
 
+ngx-cookie@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-cookie/-/ngx-cookie-3.0.1.tgz#50f3335d578a9764902cfa0d90cccba7f0f3339d"
+
 no-case@^2.2.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"

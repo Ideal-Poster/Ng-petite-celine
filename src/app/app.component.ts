@@ -1,12 +1,15 @@
 import {
-  Component
+  CookieService
+} from 'ngx-cookie';
+import {
+  Component,
+  OnInit
 } from '@angular/core';
 // import { Observable } from 'rxjs';
 import {
   initializeApp,
   database
 } from 'firebase';
-
 import {
   AngularFirestore,
   AngularFirestoreCollection
@@ -21,11 +24,8 @@ import {
   styleUrls: ['./app.component.css'],
   providers: [MailChimpApiService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor(db: AngularFirestore) {
-
-  }
   imagesBasic = [{
       img: 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?w=640&ssl=1',
       thumb: 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?w=640&ssl=1',
@@ -73,4 +73,15 @@ export class AppComponent {
     }
   ];
 
+  constructor(db: AngularFirestore, private _cookieService: CookieService) {
+    // this._cookieService.get()
+  }
+
+  ngOnInit() {
+    this._cookieService.put('greeting', 'hello');
+
+    console.log(
+      this._cookieService.get('greeting')
+    );
+  }
 }

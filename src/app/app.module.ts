@@ -23,6 +23,8 @@ import { ArtPageComponent } from './art-page/art-page.component';
 
 import { MDBBootstrapModules } from 'ng-mdb-pro';
 import { MDBSpinningPreloader } from 'ng-mdb-pro';
+import { CookieModule } from 'ngx-cookie';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { MDBSpinningPreloader } from 'ng-mdb-pro';
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    MDBBootstrapModules.forRoot()
+    MDBBootstrapModules.forRoot(),
+    CookieModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [

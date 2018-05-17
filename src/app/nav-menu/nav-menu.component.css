@@ -3,6 +3,7 @@
 }
 .header {
   padding-top: 185px;
+  /* padding-top: 20vh;   */
   padding-bottom: 65px;
   font-family: 'Cardo', serif;
   font-size: 113px;
