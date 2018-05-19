@@ -1,7 +1,7 @@
 <div class="ng-gallery mdb-lightbox {{ type }}" *ngIf="showRepeat">
   <figure class="col-md-4" *ngFor ="let i of modalImages; let index = index">
-    <div class="">
-      <img src="{{ !i.thumb ? i.img : i.thumb }}"  class="ng-thumb wow animated fadeIn" (click)="openGallery(index)" alt="Image {{ index + 1 }}" />
+    <div class="wow animated fadeIn">
+      <img src="{{ !i.thumb ? i.img : i.thumb }}"  class="ng-thumb" (click)="openGallery(index)" alt="Image {{ index + 1 }}" />
     </div>
   </figure>
 </div>
