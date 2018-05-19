@@ -21,8 +21,10 @@ import { MusicPageComponent } from './music-page/music-page.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ArtPageComponent } from './art-page/art-page.component';
 
-import { MDBBootstrapModules } from 'ng-mdb-pro';
-import { MDBSpinningPreloader } from 'ng-mdb-pro';
+import { MDBBootstrapModule } from './typescripts/free';
+import { MDBBootstrapModulePro } from './typescripts/pro/index';
+import { MDBSpinningPreloader } from './typescripts/pro/index';
+
 import { CookieModule } from 'ngx-cookie';
 
 
@@ -40,7 +42,8 @@ import { CookieModule } from 'ngx-cookie';
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
-    MDBBootstrapModules.forRoot(),
+    MDBBootstrapModule.forRoot(),
+    MDBBootstrapModulePro.forRoot(),
     CookieModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
