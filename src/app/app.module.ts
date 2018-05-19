@@ -26,6 +26,7 @@ import { MDBBootstrapModulePro } from './typescripts/pro/index';
 import { MDBSpinningPreloader } from './typescripts/pro/index';
 
 import { CookieModule } from 'ngx-cookie';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CookieModule } from 'ngx-cookie';
     AppComponent,
     MusicPageComponent,
     NavMenuComponent,
-    ArtPageComponent
+    ArtPageComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,
