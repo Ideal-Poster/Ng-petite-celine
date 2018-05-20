@@ -86,30 +86,32 @@
 <div mdbModal #mailModal="mdb-modal" class="modal fade" tabindex="-1" role="dialog" [config]="{show: true}">
   <div class="modal-dialog" role="document">
     <div class="modal-content mail-modal">
-      <div class="modal-header" style="border: none;">
-        <button type="button" class="close pull-right" aria-label="Close" (click)="mailModal.hide()">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h1 class="title text-center" style="width: 250px;
-                margin: auto;
-                padding-top: 20px;">Join Petite Celine World!</h1>
-      </div>
-      <div class="modal-body">
-        <p class="body-text">Enter your email to stay up to date on news, dates and more.</p>
-
-        <div class="md-form">
-          <input #focusInput customRegex="([A-z])\w{1,} ([A-z])\w{1,}" type="text" id="form1" class="form-control"data-error="Please enter your full name" mdbInputDirective>
-          <label for="form1" class="">Full Name</label>
+      <div class="px-5 pt-0">
+        <div class="modal-header border-0">
+          <button type="button" class="close pull-right" aria-label="Close" (click)="mailModal.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h1 class="title text-center" style="width: 250px;
+                  margin: auto;
+                  padding-top: 20px;">Join Petite Celine World!</h1>
         </div>
+        <div class="modal-body">
+          <p class="body-text">Enter your email to stay up to date on news, dates and more.</p>
 
-        <div class="md-form">
-            <input type="email" id="form2" class="form-control" data-error="Please enter a valid email" mdbInputDirective>
-            <label for="form2">Email Address</label>
+          <div class="md-form">
+            <input #focusInput customRegex="([A-z])\w{1,} ([A-z])\w{1,}" type="text" id="form1" class="form-control"data-error="Please enter your full name" mdbInputDirective>
+            <label for="form1" class="">Full Name</label>
+          </div>
+
+          <div class="md-form">
+              <input type="email" id="form2" class="form-control" data-error="Please enter a valid email" mdbInputDirective>
+              <label for="form2">Email Address</label>
+          </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-elegant waves-light" aria-label="Close" (click)="mailModal.hide()" mdbWavesEffect>Close</button>
-        <button type="button" class="btn btn-cyan relative waves-light" mdbWavesEffect disabled>Subscribe</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-elegant waves-light" aria-label="Close" (click)="mailModal.hide()" mdbWavesEffect>Close</button>
+          <button type="button" class="btn btn-cyan relative waves-light" mdbWavesEffect disabled>Subscribe</button>
+        </div>
       </div>
     </div>
   </div>

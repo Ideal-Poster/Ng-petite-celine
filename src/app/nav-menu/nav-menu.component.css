@@ -1,15 +1,8 @@
 :host {
   display: block;
+  z-index: 20;
 }
-.header {
-  padding-top: 185px;
-  /* padding-top: 20vh;   */
-  padding-bottom: 65px;
-  font-family: 'Cardo', serif;
-  font-size: 113px;
-  /* color: #e0dce0; */
-  line-height: 0.659;
-}
+
 
 ul.menu-buttons {
   font-size: 44px;
@@ -22,4 +15,8 @@ ul.menu-buttons {
   font-size: 20px;
   margin-right: 20px;
   margin-bottom: 100px;
+}
+
+.shadow {
+  text-shadow: 4px 4px 5px rgb(40, 39, 39, 0.2);
 }
