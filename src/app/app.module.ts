@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { firebaseConfig } from '../environments/firebase.config';
@@ -29,7 +29,13 @@ import { CookieModule } from 'ngx-cookie';
 import { FooterComponent } from './footer/footer.component';
 import { ActingPageComponent } from './acting-page/acting-page.component';
 
-
+const appRoutes: Routes = [
+  { path: '', component: MusicPageComponent },
+  { path: 'art', component: ArtPageComponent },
+  { path: 'acting', component: ActingPageComponent }
+  { path: '', redirectTo: '/music ', pathMatch: 'full' }
+  // { path: '**', component: PageNotFoundComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +46,7 @@ import { ActingPageComponent } from './acting-page/acting-page.component';
     ActingPageComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,

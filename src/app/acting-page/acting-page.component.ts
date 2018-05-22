@@ -16,14 +16,6 @@ export class ActingPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mask1 = false;
-    this.mask2 = false;
-    this.mask3 = false;
-    setTimeout(() => {
-      this.mask1 = true;
-      this.mask2 = true;
-      this.mask3 = true;
-    }, 50);
   }
 
   toggleMask(mask: boolean, index: number) {
