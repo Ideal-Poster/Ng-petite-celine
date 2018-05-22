@@ -30,16 +30,9 @@
             <h2 style="width: 275px;
             text-shadow: 4px 4px 5px rgb(40, 39, 39, 0.1);">“New Album”</h2>
           </div>
-              <div class="video-wrapper">
-            <iframe
-              id="myVideo"
-              style="opacity: 0.5;"
-              class="music-video"
-              src="https://www.youtube.com/embed/1c5eLrREIf8?rel=0&mute=1&autoplay=1;showinfo=0"
-              frameborder="0"
-              gesture="media"
-              allow="encrypted-media"
-              allowfullscreen></iframe>
+          <div class="video-wrapper">
+            <iframe id="myVideo" style="opacity: 0.5;" class="music-video" src="https://www.youtube.com/embed/1c5eLrREIf8?rel=0&mute=1&autoplay=1;showinfo=0"
+              frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
           </div>
           <div class="purchase-icons row">
             <p class="text-shadow: 4px 4px 5px rgb(40, 39, 39, 0.1);">Purchase here</p>
@@ -66,13 +59,13 @@
 
 <div style="border: 10px solid #1C1820">
   <div class="events-section">
+
+    <div class="col-sm-2 green-draken-1" style="height: 100%; position: absolute;">
+      <h3 class="events-banner">EVENTS</h3>
+    </div>
+
     <div class="row">
-
-      <div class="col-sm-2">
-        <h3 class="events-banner">EVENTS</h3>
-      </div>
-
-      <div class="col-sm-6">
+      <div class="offset-sm-2 col-sm-6">
         <div class="event event01">
           <div class="date">
             <p>Saturday April 21st</p>
@@ -90,17 +83,38 @@
         <div class="button ">
           <p class="tickets">Tickets</p>
         </div>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="offset-sm-2 col-sm-6">
+        <div class="event event01">
+          <div class="date">
+            <p>Saturday April 21st</p>
+          </div>
+          <div class="venue">
+            <p>Arlene's Grocery</p>
+          </div>
+          <div class="location">
+            <p>95 Stanton St, New York, NY 10002</p>
+          </div>
+        </div>
       </div>
 
-      <div class="event event02"></div>
-
+      <div class="col-sm-4">
+        <div class="button ">
+          <p class="tickets">Tickets</p>
+        </div>
+      </div>
     </div>
+
+    <div class="event event02"></div>
+
   </div>
 </div>
 
 
-<div mdbModal #mailModal="mdb-modal" class="modal fade" tabindex="-1" role="dialog" [config]="{show: true}">
+<!-- <div mdbModal #mailModal="mdb-modal" class="modal fade" tabindex="-1" role="dialog" [config]="{show: true}">
   <div class="modal-dialog" role="document">
     <div class="modal-content mail-modal">
       <div class="px-5 pt-0">
@@ -116,13 +130,14 @@
           <p class="body-text">Enter your email to stay up to date on news, dates and more.</p>
 
           <div class="md-form">
-            <input #focusInput customRegex="([A-z])\w{1,} ([A-z])\w{1,}" type="text" id="form1" class="form-control"data-error="Please enter your full name" mdbInputDirective>
+            <input #focusInput customRegex="([A-z])\w{1,} ([A-z])\w{1,}" type="text" id="form1" class="form-control" data-error="Please enter your full name"
+              mdbInputDirective>
             <label for="form1" class="">Full Name</label>
           </div>
 
           <div class="md-form">
-              <input type="email" id="form2" class="form-control" data-error="Please enter a valid email" mdbInputDirective>
-              <label for="form2">Email Address</label>
+            <input type="email" id="form2" class="form-control" data-error="Please enter a valid email" mdbInputDirective>
+            <label for="form2">Email Address</label>
           </div>
         </div>
         <div class="modal-footer">
@@ -132,4 +147,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

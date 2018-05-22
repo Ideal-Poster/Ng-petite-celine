@@ -4,7 +4,7 @@
       <app-nav-menu></app-nav-menu>
     </div>
     <div class="col-sm-9" style="z-index: 1; padding-top: 92px;">
-      <div class="wow fadeIn">
+      <div class="wow fadeIn" data-wow-duration="0.6s">
 
         <img *ngIf="mask1" (mouseover)="toggleMask(mask1, 1)" src="../../assets/images/celine-1-mask.png" class="img-fluid" alt="Responsive image">
         <img [hidden]="mask1" (mouseleave)="toggleMask(mask1, 1)" src="../../assets/images/celine-1.png" class="img-fluid" alt="Responsive image">
@@ -14,7 +14,7 @@
           <p>Bio</p>
         </a>
 
-        <img *ngIf="mask2" (mouseover)="toggleMask(mask2, 2)" src="../../assets/images/celine-2-mask.png" class="img-fluid" alt="Responsive image"
+        <img  *ngIf="mask2" (mouseover)="toggleMask(mask2, 2)" src="../../assets/images/celine-2-mask.png" class="img-fluid" alt="Responsive image"
           style="max-width: 50%;">
         <img [hidden]="mask2" (mouseleave)="toggleMask(mask2, 2)" src="../../assets/images/celine-2.png" class="img-fluid" alt="Responsive image"
           style="max-width: 50%;">

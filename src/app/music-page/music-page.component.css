@@ -76,6 +76,7 @@ h2 {
 .event {
   font-family: 'Greycliff-Light';
   line-height: 18px;
+  padding-bottom: 30px;
 }
 .event > .venue {
   font-size: 39px;

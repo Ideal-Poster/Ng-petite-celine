@@ -32,7 +32,7 @@ import { ActingPageComponent } from './acting-page/acting-page.component';
 const appRoutes: Routes = [
   { path: '', component: MusicPageComponent },
   { path: 'art', component: ArtPageComponent },
-  { path: 'acting', component: ActingPageComponent }
+  { path: 'acting', component: ActingPageComponent },
   { path: '', redirectTo: '/music ', pathMatch: 'full' }
   // { path: '**', component: PageNotFoundComponent }
 ];
