@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acting-page.component.css']
 })
 export class ActingPageComponent implements OnInit {
+  title = 'Actress';
   mask1 = true;
   mask2 = true;
   mask3 = true;
@@ -22,7 +23,7 @@ export class ActingPageComponent implements OnInit {
       this.mask1 = true;
       this.mask2 = true;
       this.mask3 = true;
-    }, 20);
+    }, 50);
   }
 
   toggleMask(mask: boolean, index: number) {

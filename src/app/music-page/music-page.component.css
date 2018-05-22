@@ -42,8 +42,8 @@ h2 {
 }
 
 .purchase-icons {
-  margin-top: 15px;
-  margin-left: 0px;
+  margin-top: 56px;
+  margin-left: -50px;
 }
 .purchase-icons > i {
   font-size: 20px;
@@ -106,4 +106,18 @@ h2 {
   right: 35px;
   top: 3px;
   vertical-align: baseline;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  /* padding-top: 25px; */
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 132%;
+  height: 132%;
 }

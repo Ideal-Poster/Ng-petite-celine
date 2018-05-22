@@ -7,6 +7,7 @@ import { ImageModalComponent} from 'ng-mdb-pro/pro/lightbox';
   styleUrls: ['./art-page.component.css']
 })
 export class ArtPageComponent implements OnInit {
+  title = 'Gallery';
   imagesBasic = [{
       img: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
       thumb: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',

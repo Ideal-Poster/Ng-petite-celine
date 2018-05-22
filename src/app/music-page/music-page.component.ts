@@ -8,8 +8,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class MusicPageComponent implements OnInit {
   // @ViewChild('autoShownModal') public autoShownModal: ModalDirective;
-  public isModalShown = true;
+  title = 'Celine';
 
+  public isModalShown = false;
 
   ngOnInit() {
     // mailModal.show()
