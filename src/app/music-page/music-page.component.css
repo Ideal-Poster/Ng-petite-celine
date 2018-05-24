@@ -1,6 +1,7 @@
 :host {
-  display: block;
+
 }
+
 .mail-modal {
   margin-top: 20vh;
   border-width: 5.5px;
@@ -10,6 +11,7 @@
   font-family: "Greycliff-Regular";
   color: #1c1820;
 }
+
 .bkground {
   background: url("../../assets/celine-portrait.png")no-repeat 50% 50%;
   background-size: cover;
@@ -17,26 +19,32 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
   min-height: 100vh;
 }
+
 h2 {
   font-size: 44px;
   font-family: 'Cardo', serif;
   padding-bottom: 13px;
 }
+
 :host /deep/ ul {
   color: #75707a;
 }
+
 .album {
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
+
 .tracks {
   padding-bottom: 3px;
 }
+
 .featured-video {
-  padding-right: 56px;
+  /* padding-right: 56px; */
 }
+
 .video {
   padding-top: 35px;
 }
@@ -45,42 +53,57 @@ h2 {
   margin-top: 56px;
   margin-left: -50px;
 }
-.purchase-icons > i {
+
+.purchase-icons>i {
   font-size: 20px;
   vertical-align: bottom;
 }
-.purchase-icons > p {
+
+.purchase-icons>p {
   font-size: 16px;
   padding-right: 15px;
 }
-.purchase-icons > .icons > * {
+
+.purchase-icons>.icons>* {
   margin-right: 10px;
 }
-.purchase-icons > p,
-.purchase-icons > .icons > * {
+
+.purchase-icons>p,
+.purchase-icons>.icons>* {
   color: #a4955c;
 }
+
 .events-section {
-  padding: 90px 10px;
+  padding: 90px 0px 0px 0px;
   border: 10px solid white;
   background: #1c1820;
   min-height: 100vh;
 }
+
 .events-banner {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 47px;
   font-family: 'Greycliff-Medium';
-  height: 500px;
+  height: 100px;
+  /* height: 100%; position: absolute; */
 }
+
+events-banner-container {
+  height: 100%;
+  position: absolute;
+}
+
 .event {
   font-family: 'Greycliff-Light';
   line-height: 18px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
-.event > .venue {
+
+.event>.venue {
   font-size: 39px;
 }
+
 .button {
   border-width: 1.569px;
   border-color: rgb(224, 220, 224);
@@ -99,6 +122,7 @@ h2 {
   margin: auto;
   margin-top: -2px;
 }
+
 .rectangle {
   position: relative;
   background-color: rgb(85, 170, 160);
@@ -108,6 +132,7 @@ h2 {
   top: 3px;
   vertical-align: baseline;
 }
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -115,10 +140,43 @@ h2 {
   /* padding-top: 25px; */
   height: 0;
 }
+
 .video-wrapper iframe {
   position: absolute;
   top: 0;
   left: -50px;
   width: 132%;
   height: 132%;
+}
+
+@media (max-width: 991px) {
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+  }
+  .feat-content-row {
+    width: 300px;
+  }
+  .events-banner {
+    writing-mode: horizontal-tb;
+    height: 100px;
+    /* height: 100%; position: absolute; */
+  }
+  .events-section {
+    padding: 40px 0px 0px 0px;
+  }
+  .event {
+    padding-left: 20px;
+  }
+
+}
+
+.music-video {
+  opacity: 0.7;
+  background: rgb(105, 211, 176);
+}
+
+.music-video:hover {
+  opacity: 1;
 }

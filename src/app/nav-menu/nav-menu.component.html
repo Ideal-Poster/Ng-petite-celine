@@ -1,36 +1,41 @@
-<h1 class="header">
-  <p style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
-    Petite<br>
-    {{ title }}
-  </p>
-</h1>
+<div class="d-none d-md-block">
+  <h1 class="header">
+    <p style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
+      Petite<br>
+    </p>
+    <p style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);
+    margin-top: -14px;
+    z-index: 100;" class="fadeInDown animated" data-wow-duration="0.6s">{{ title }} </p>
+  </h1>
 
-<ul class="menu-buttons">
-  <li class="music"
-    style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
-    <a routerLink="/">Music</a>
-  </li>
-  <li class="art"
-    style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
-    <a routerLink="/art">Art</a>
-  </li>
-  <li class="acting"
-    style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
-    <a routerLink="/acting">Acting</a>
-  </li>
-</ul>
+  <ul class="menu-buttons">
+    <li class="music"
+      style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
+      <a routerLink="/" routerLinkActive="active">Music</a>
+    </li>
+    <li class="art"
+      style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
+      <a routerLink="/art" routerLinkActive="active">Art</a>
+    </li>
+    <li class="acting"
+      style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">
+      <a routerLink="/acting" routerLinkActive="active">Acting</a>
+    </li>
+  </ul>
 
-<div>
-  <a href="https://www.instagram.com/petite_celine/" target="_blank">
-    <i class="nav-icon fab fa-instagram hoverable"></i>
-  </a>
-  <a href="https://www.facebook.com/cdutertre.nyc" target="_blank">
-    <i class="nav-icon fab fa-facebook hoverable"></i>
-  </a>
-  <a href="https://www.youtube.com/user/celineNYCmusic" target="_blank">
-    <i class="nav-icon fab fa-youtube hoverable"></i>
-  </a>
+  <div>
+    <a href="https://www.instagram.com/petite_celine/" target="_blank">
+      <i class="nav-icon fab fa-instagram hoverable"></i>
+    </a>
+    <a href="https://www.facebook.com/cdutertre.nyc" target="_blank">
+      <i class="nav-icon fab fa-facebook hoverable"></i>
+    </a>
+    <a href="https://www.youtube.com/user/celineNYCmusic" target="_blank">
+      <i class="nav-icon fab fa-youtube hoverable"></i>
+    </a>
+  </div>
 </div>
-<a href="mailto:petitecelineworld@gmail.com?Subject=Hello%20again" class="brown-text">
+
+<a href="mailto:petitecelineworld@gmail.com?Subject=Hello%20again" class="pl-4 pb-3 grey-text fixed-bottom" style="width:300px;">
   <p>petitecelineworld@gmail.com</p>
 </a>

@@ -1,3 +1,7 @@
+:host {
+  width: 100%;
+}
+
 :host /deep/ ul {
   list-style-type: none;
   margin: 0;
@@ -9,8 +13,9 @@
   font-family: 'Greycliff-Regular';
 }
 :host /deep/.header {
-  padding-top: 185px;
-  /* padding-top: 25vh; */
+  /* padding-top: 185px; */
+
+  margin-top: 23.75vh;
   padding-bottom: 65px;
   font-family: 'Cardo', serif;
   font-size: 113px;

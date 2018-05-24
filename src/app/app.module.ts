@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     ActingPageComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes, { enableTracing: false }),
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,

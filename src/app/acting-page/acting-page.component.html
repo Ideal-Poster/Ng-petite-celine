@@ -4,7 +4,7 @@
       <app-nav-menu></app-nav-menu>
     </div>
     <div class="col-sm-9" style="z-index: 1; padding-top: 92px;">
-      <div class="wow fadeIn" data-wow-duration="0.6s">
+      <div class="animated fadeIn" data-wow-duration="0.6s">
 
         <img *ngIf="mask1" (mouseover)="toggleMask(mask1, 1)" src="../../assets/images/celine-1-mask.png" class="img-fluid" alt="Responsive image">
         <img [hidden]="mask1" (mouseleave)="toggleMask(mask1, 1)" src="../../assets/images/celine-1.png" class="img-fluid" alt="Responsive image">
@@ -36,14 +36,21 @@
         width: 40vw;
         position:absolute;
         left: -10px;"></div>
-    <div class="offset-sm-2 col-sm-6 video float-right wow fadeIn" style="padding-top: 50px;">
+    <div class="offset-sm-2 col-sm-6 video float-lg-right wow fadeIn" style="padding-top: 50px;">
       <div class="video-wrapper">
-        <iframe class="music-video" src="https://www.youtube.com/embed/96ayQ3GsfrE?rel=0&mute=1&autoplay=1" frameborder="0" gesture="media"
+        <iframe class="" src="https://www.youtube.com/embed/96ayQ3GsfrE?rel=0&mute=1&autoplay=1" frameborder="0" gesture="media"
           allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="pull-sm-1 col-sm-4">
+    <div class="col-sm-2">
       <h1 class="header reel" style="text-shadow: 5px 5px 6px rgb(40, 39, 39, 0.12);">Reel</h1>
     </div>
+    <div class="col-sm-2 align-bottom align-text-bottom">
+      <div class="row align-text-bottom">
+          <p class="align-bottom">Download Resume</p>&nbsp;&nbsp;
+          <i class="fa fa-download float-right" style="font-size: 24px" aria-hidden="true"></i>
+      </div>
+    </div>
+
   </div>
 </div>
