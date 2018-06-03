@@ -1,22 +1,12 @@
-import {
-  CookieService
-} from 'ngx-cookie';
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { Observable } from 'rxjs';
-import {
-  initializeApp,
-  database
-} from 'firebase';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection
-} from 'angularfire2/firestore';
-import {
-  MailChimpApiService
-} from './services/mail-chimp-api.service';
+import { MailChimpApiService } from './services/mail-chimp-api.service';
+
+import {PlaylistService} from './services/playlist.service';
+import {SoundCloudSearch} from './services/soundcloud-search.service';
+import {PlayerCmp} from './player/player.component';
+import {TabListCmp} from './tablist/tablist.component';
+import 'rxjs/Rx';
 
 @Component({
   selector: 'app-root',
@@ -25,15 +15,11 @@ import {
   providers: [MailChimpApiService]
 })
 export class AppComponent implements OnInit {
-  constructor(db: AngularFirestore, private _cookieService: CookieService) {
-    // this._cookieService.get()
+  constructor() {
+
   }
 
   ngOnInit() {
-    this._cookieService.put('greeting', 'hello');
 
-    console.log(
-      this._cookieService.get('greeting')
-    );
   }
 }
