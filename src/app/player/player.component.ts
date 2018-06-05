@@ -6,19 +6,15 @@ import {Events} from '../interfaces/events.model';
 
 import {ControlsCmp} from "./controls.component";
 import {VolumeCmp} from './volume.component';
-import {SongImageCmp} from './song-image.component';
 
 import {TimeSeekerCmp} from './time-seeker.component';
 import {TimeInfoCmp} from './time-info.component';
 
 @Component({
-	selector: 'player',
-	template: `
+  selector: 'player',
+  template: `
 	<section class="player">
 		<div class="row">
-			<div class="col-xs-4 player-image">
-				<song-image [song]="song"></song-image>
-			</div>
 			<div class="col-xs-8 player-info">
 				<h2 class='song-title' *ngIf='song'>{{ song.name }}</h2>
 				<h3 class="song-artist" *ngIf='song'>{{ song.artist }}</h3>
@@ -48,7 +44,7 @@ import {TimeInfoCmp} from './time-info.component';
 		</div>
 	</section>
 	`,
-	styles: [`
+  styles: [`
 	.player{
 		padding-top:7px;
 		padding-left:7px;
@@ -89,41 +85,41 @@ import {TimeInfoCmp} from './time-info.component';
 		outline: none;
 	}
 	`],
-	//directives:[NgIf, ControlsCmp, VolumeCmp, SongImageCmp, TimeSeekerCmp, TimeInfoCmp]
+  //directives:[NgIf, ControlsCmp, VolumeCmp, SongImageCmp, TimeSeekerCmp, TimeInfoCmp]
 })
 export class PlayerCmp implements OnInit {
-	public song: Song;
-	isPlaying: boolean;
-	currentTime: number;
-	totalTime: number;
-	private soundManager: SoundManager;
+  public song: Song;
+  isPlaying: boolean;
+  currentTime: number;
+  totalTime: number;
+  private soundManager: SoundManager;
 
-	constructor(soundManager: SoundManager) {
-		this.song = null;
-		this.soundManager = soundManager;
-		this.soundManager.on(Events.ChangeSong, (song) => {
-			this.song = song;
-			this.totalTime = this.soundManager.getTotalTime();
-		});
-	}
+  constructor(soundManager: SoundManager) {
+    this.song = null;
+    this.soundManager = soundManager;
+    this.soundManager.on(Events.ChangeSong, (song) => {
+      this.song = song;
+      this.totalTime = this.soundManager.getTotalTime();
+    });
+  }
 
-	ngOnInit() {
-		this.soundManager.on(Events.Pause, () => {
-			this.isPlaying = false;
-		});
+  ngOnInit() {
+    this.soundManager.on(Events.Pause, () => {
+      this.isPlaying = false;
+    });
 
-		this.soundManager.on(Events.Play, () => {
-			this.isPlaying = true;
-		});
+    this.soundManager.on(Events.Play, () => {
+      this.isPlaying = true;
+    });
 
-		this.soundManager.on(Events.PlayResume, () => {
-			this.isPlaying = true;
-		});
+    this.soundManager.on(Events.PlayResume, () => {
+      this.isPlaying = true;
+    });
 
-		this.soundManager.on(Events.Time, (time) => {
-			this.currentTime = time;
-			this.totalTime = this.soundManager.getTotalTime();
-		});
-	}
+    this.soundManager.on(Events.Time, (time) => {
+      this.currentTime = time;
+      this.totalTime = this.soundManager.getTotalTime();
+    });
+  }
 
 }

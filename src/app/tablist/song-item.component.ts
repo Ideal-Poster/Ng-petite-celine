@@ -7,57 +7,11 @@ import {consts} from "../app.consts";
 @Component({
 	selector: 'song-item',
 	template: `
-	<div class="row song-item">
-		<div class="col-xs-3 song-list-avatar-column">
-			<img class="playlist-item-image"
-					[src]="getSongImage(song)"
-					[width]="35"
-					(click)='play(song)'
-					title="Play"/>
-		</div>
-
-		<div class="col-xs-6 song-list-information-column">
+		<div class="song-list-information-column">
 				<div class="playlist-item-title"
 						(click)='play(song)'
 						title="Play">{{song.name}}</div>
-				<div class="playlist-item-artist">
-						{{song.artist}}
-				</div>
 		</div>
-
-		<div class="col-xs-3 playlist-item-control-group">
-			<div class="row">
-				<div class="col-xs-12">
-
-					<a href="#"
-							title="Play"
-							class="song-list-button"
-							(click)='play(song)'
-							*ngIf='showPlay'
-							>
-							<i class="glyphicon icon-play"></i></a>
-
-					<a href="#"
-							title=""
-							class="song-list-button"
-							(click)='addSongToPlaylist(song)'
-							*ngIf='showAdd'>
-							<i class="glyphicon icon-add"></i></a>
-
-					<a href="#"
-							title="Xóa khỏi playlist"
-							class="song-list-button"
-							(click)='delete(song)'
-							*ngIf='showDelete'>
-							<i class="glyphicon icon-remove"></i></a>
-
-				</div>
-			</div>
-
-			<i class="glyphicon icon-sound playing-song-icon" *ngIf='playingSong != null && song.id == playingSong.id'></i>
-		</div>
-	</div>
-
 	`,
 	styles: [`
 		.song-item{

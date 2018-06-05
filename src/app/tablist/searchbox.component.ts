@@ -8,40 +8,14 @@ import { NgForm  } from '@angular/forms';
 import {SongItemCmp} from '../tablist/song-item.component';
 
 @Component({
-	selector: 'search-box',
-	entryComponents: [SongItemCmp],
-	template: `
+  selector: 'search-box',
+  entryComponents: [SongItemCmp],
+  template: `
 	<div>
-	<div class="row" id="searchbox" >
-		<div class="col-xs-12">
-			<form #f="ngForm" (ngSubmit)="onSubmit(f)"  novalidate>
-				<div class="form-group" >
-					<input type="text"
-									name="query"
-									ngModel
-									class="form-control"
-									id="form-field-search"
-									required 
-									#query="ngModel"
-									>
-					<span class="icon-search"></span>
-				</div>
-			</form>
-		</div>
-	</div>
-	<div class="tab-pane" id="searchResult">
-		<div class="search media-list" data-type="search">
-			<song-item *ngFor="let song of searchResult" [song]="song" [show-add]="true" [show-play]="true"></song-item>		
-		</div>
-
-		<div id='search-help' *ngIf='searchResult == null || searchResult.length == 0'>
-			<img src='${consts.baseUrl}images/arrow.jpg'/>
-			<p>Search your music on SoundCloud</p>
-		</div>
-	</div>
+		<song-item *ngFor="let song of searchResult" [song]="song" [show-add]="true" [show-play]="true"></song-item>
 	</div>
 	`,
-	styles: [`
+  styles: [`
 	#searchbox {
 		padding: 10px 10px 0 6px;
 	}
@@ -87,35 +61,49 @@ import {SongItemCmp} from '../tablist/song-item.component';
 	}
 	`]
 })
-export class SearchBoxCmp{
-	
-	searchResult: any = [];
-	private searchClient: ISearch;
-	private showAdd: boolean = true;
-	playlistService: PlaylistService;
-	
-	constructor(playlistService: PlaylistService, private soundCloudSearch: SoundCloudSearch ) {
-		this.playlistService = playlistService;
+export class SearchBoxCmp {
 
-		/*this.keyword.valueChanges
-					.debounceTime(400)
-					.distinctUntilChanged()
-					.flatMap(keywordStr => this.soundCloudSearch.search(keywordStr.toString()))
-					.subscribe(data => {
-						this.searchResult = data;
-					});*/
-	}
+  searchResult: any = [];
+  private searchClient: ISearch;
+  private showAdd: boolean = true;
+  // playlistService: PlaylistService;
+  data: Array < any > ;
 
-	search(keyword: string) {
-		this.soundCloudSearch
-				.search(keyword)
-				.subscribe(data => {
-					this.searchResult = data;
-				});
-	}
+  constructor(private playlistService: PlaylistService, private soundCloudSearch: SoundCloudSearch) {
+    this.playlistService = playlistService;
 
-	onSubmit(f: NgForm) {
-		console.log(f);
-		return this.search(f.value.query);
-	}
+    /*this.keyword.valueChanges
+    			.debounceTime(400)
+    			.distinctUntilChanged()
+    			.flatMap(keywordStr => this.soundCloudSearch.search(keywordStr.toString()))
+    			.subscribe(data => {
+    				this.searchResult = data;
+    			});*/
+    this.search('e');
+
+    this.playlistService
+      .getAll()
+      .subscribe(playlistData => {
+        this.data = playlistData;
+      });
+    this.playlistService.publishChanges();
+  }
+
+  retrievePlaylist() {
+
+  }
+
+  search(keyword: string) {
+    this.soundCloudSearch
+      .search(keyword)
+      .subscribe(data => {
+        this.searchResult = data;
+      });
+  }
+
+  onSubmit(f: NgForm) {
+    console.log(f);
+    return this.search(f.value.query);
+  }
 }
+

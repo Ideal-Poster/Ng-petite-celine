@@ -3,13 +3,13 @@ import {SoundManager} from '../services/soundmanager.service';
 import {Events} from '../interfaces/events.model';
 
 @Component({
-	selector: 'time-seeker',
-	template: `
+  selector: 'time-seeker',
+  template: `
 		<div id="timeSlider" (click)='changePlaybackTime($event)'>
-				<span id='sliderHandler' tabindex="0" [style.left]="calculatePositionByTime()" [style.top]="1"></span>
+				<span id='sliderHandler' tabindex="0" [style.left.px]="calculatePositionByTime()" [style.top]="1"></span>
 		</div>
 	`,
-	styles: [`
+  styles: [`
 		#sliderHandler {
 			position: absolute;
 		}
@@ -44,39 +44,40 @@ import {Events} from '../interfaces/events.model';
 	`]
 })
 export class TimeSeekerCmp implements OnInit {
-	@Input() time: number;
-	@Input('total-time') duration: number;
+  @Input() time: number;
+  @Input('total-time') duration: number;
 
-	constructor(private soundManager: SoundManager,
-							private element: ElementRef) {
+  constructor(private soundManager: SoundManager,
+    private element: ElementRef) {
 
-	}
+  }
 
-	calculatePositionByTime() {
-		var percent = this.time * 100 / this.duration;
-		var pos = percent * this.getTimeSliderWidth() / 100;
-		return pos;
-	}
+  calculatePositionByTime() {
+    var percent = this.time * 100 / this.duration;
+    var pos = percent * this.getTimeSliderWidth() / 100;
+    return pos;
+  }
 
-	ngOnInit() {
-		var offset = this.element.nativeElement.getBoundingClientRect();
-		var width = this.element.nativeElement.style.width;
-		var height = this.element.nativeElement.style.height;
-	}
+  ngOnInit() {
+    var offset = this.element.nativeElement.getBoundingClientRect();
+    var width = this.element.nativeElement.style.width;
+    var height = this.element.nativeElement.style.height;
+  }
 
 
-	changePlaybackTime($event) {
-		var time = this.calculateTimePercentOnClick($event);
-		this.soundManager.seek(time);
-	}
+  changePlaybackTime($event) {
+    var time = this.calculateTimePercentOnClick($event);
+    this.soundManager.seek(time);
+  }
 
-	private calculateTimePercentOnClick($event) {
-		var parentX = this.getTimeSliderWidth();
-		var percent = $event.x * 100 / parentX;
-		return percent;
-	}
+  private calculateTimePercentOnClick($event) {
+    var parentX = this.getTimeSliderWidth();
+    var percent = $event.x * 100 / parentX;
+    return percent;
+  }
 
-	private getTimeSliderWidth() {
-		return parseInt(this.element.nativeElement.children[0].clientWidth);
-	}
+  private getTimeSliderWidth() {
+    return parseInt(this.element.nativeElement.children[0].clientWidth);
+  }
 }
+
