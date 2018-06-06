@@ -15,7 +15,7 @@ import { consts } from '../app.consts';
 				<img src='${consts.baseUrl}images/play.png' [hidden]='isPlaying'/>
 				<img src='${consts.baseUrl}images/pause.png' [hidden]='!isPlaying'/>
 		</a>
-		<a href='#' id="btnNextSong" (click)='next()'>
+		<a href='#' class='pr-3' id="btnNextSong" (click)='next()'>
 				<img src='${consts.baseUrl}images/next.png'/>
 		</a>
 	`,

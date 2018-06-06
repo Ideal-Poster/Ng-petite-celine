@@ -12,45 +12,39 @@ import {TimeInfoCmp} from './time-info.component';
 
 @Component({
   selector: 'player',
-  template: `
-	<section class="player">
-		<div class="row">
-			<div class="col-xs-8 player-info">
-				<h2 class='song-title' *ngIf='song'>{{ song.name }}</h2>
-				<h3 class="song-artist" *ngIf='song'>{{ song.artist }}</h3>
-				<div class='controllerGroup'>
-					<div class='pull-left'>
-						<controls [song]="song" [is-playing]="isPlaying"></controls>
-					</div>
-					<div class='pull-right'>
-						<volume></volume>
-					</div>
-				</div>
+	template: `
+	<div class="container-fluid fixed-top grey darken-4">
+		<div class="container">
+			<section class="player" style="height:50px">
+			<div class="row">
+			<div>
+				<controls [song]="song" [is-playing]="isPlaying"></controls>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="row">
-					<div class="col-xs-12">
-						<time-info [song]="song" [time]="currentTime" [total-time]="totalTime"></time-info>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12">
-						<time-seeker [time]="currentTime" [total-time]="totalTime"></time-seeker>
-					</div>
-				</div>
+			<div class="pl-3 pt-2">
+				<time-info [song]="song" [time]="currentTime" [total-time]="totalTime"></time-info>
 			</div>
-		</div>
-	</section>
+				<div class="pl-3 pt-2">
+					<h2 class='song-title px-3'>{{ song.name }} - {{ song.artist }}</h2>
+					</div>
+			</div>
+			</section>
+			</div>
+			<time-seeker [time]="currentTime" [total-time]="totalTime"></time-seeker>
+	</div>
 	`,
   styles: [`
+	:host {
+		// position: fixed;
+		z-index: 10;
+	}
+
 	.player{
 		padding-top:7px;
 		padding-left:7px;
 		padding-bottom: 18px;
 		padding-right: 7px;
-		background-color: #fff;
+		// background-color: #fff;
+		// width: 100vw;
 	}
 
 	.song-title {
@@ -61,7 +55,7 @@ import {TimeInfoCmp} from './time-info.component';
 		margin-bottom: 7px;
 	}
 
-	.song-artist{
+	.song-artist2
 		font-size: 13px;
 		margin-top: 6px;
 		color:#939393;
@@ -84,6 +78,7 @@ import {TimeInfoCmp} from './time-info.component';
 		text-decoration: none;
 		outline: none;
 	}
+
 	`],
   //directives:[NgIf, ControlsCmp, VolumeCmp, SongImageCmp, TimeSeekerCmp, TimeInfoCmp]
 })
@@ -123,3 +118,4 @@ export class PlayerCmp implements OnInit {
   }
 
 }
+

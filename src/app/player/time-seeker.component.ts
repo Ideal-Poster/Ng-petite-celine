@@ -5,11 +5,11 @@ import {Events} from '../interfaces/events.model';
 @Component({
   selector: 'time-seeker',
   template: `
-		<div id="timeSlider" (click)='changePlaybackTime($event)'>
+		<div class='ml-5' id="timeSlider" (click)='changePlaybackTime($event)'>
 				<span id='sliderHandler' tabindex="0" [style.left.px]="calculatePositionByTime()" [style.top]="1"></span>
 		</div>
 	`,
-  styles: [`
+	styles: [`
 		#sliderHandler {
 			position: absolute;
 		}
@@ -20,13 +20,13 @@ import {Events} from '../interfaces/events.model';
 
 		#timeSlider{
 			position: relative;
-			height:8px;
+			height:5px;
 			background-color:#cfcfcf;
 			background-image:none;
 			border:none;
-			width: 307px;
+			width: 100vw;
+			left: 16px;
 			float: right;
-			border-radius: 4px;
 			cursor: pointer !important;
 		}
 
