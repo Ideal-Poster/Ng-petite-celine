@@ -15,7 +15,7 @@ import {TimeInfoCmp} from './time-info.component';
 	template: `
 	<div class="container-fluid fixed-top grey darken-4">
 		<div class="container">
-			<section class="player" style="height:50px">
+			<section class="player" style="height:55px">
 			<div class="row">
 			<div>
 				<controls [song]="song" [is-playing]="isPlaying"></controls>

@@ -6,12 +6,13 @@ import {Events} from '../interfaces/events.model';
   selector: 'time-seeker',
   template: `
 		<div class='ml-5' id="timeSlider" (click)='changePlaybackTime($event)'>
-				<span id='sliderHandler' tabindex="0" [style.left.px]="calculatePositionByTime()" [style.top]="1"></span>
+				<div id='sliderHandler' tabindex="0" [style.width.px]="calculatePositionByTime()" [style.top.px]="1"></div>
 		</div>
 	`,
 	styles: [`
 		#sliderHandler {
 			position: absolute;
+			background: #55AAA0;
 		}
 
 		#timeSlider{
@@ -20,8 +21,8 @@ import {Events} from '../interfaces/events.model';
 
 		#timeSlider{
 			position: relative;
-			height:5px;
-			background-color:#cfcfcf;
+			height:4px;
+			background-color: transparent;
 			background-image:none;
 			border:none;
 			width: 100vw;
@@ -32,13 +33,13 @@ import {Events} from '../interfaces/events.model';
 
 		#sliderHandler{
 			position: absolute;
-			border-radius: 100px;
-			background-image: none !important;
-			background-color: #fff !important;
-			border:1px solid #ff8b00 !important;
+			// border-radius: 100px;
+			// background-image: none !important;
+			// background-color: #fff !important;
+			// border:1px solid #ff8b00 !important;
 			top:-4px !important;
-			width:15px !important;
-			height:15px !important;
+			// width:15px !important;
+			height:4px !important;
 			box-sizing: border-box;
 		}
 	`]

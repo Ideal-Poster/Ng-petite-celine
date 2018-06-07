@@ -8,19 +8,29 @@ import { consts } from '../app.consts';
 @Component({
 	selector: 'controls',
 	template:`
-		<a href='#' id="btnPrevious" title="" (click)='previous()'>
-				<img src='${consts.baseUrl}images/prev.png'/>
-		</a>
-		<a href='#' id="btnPlayPause" (click)='togglePlayPause()'>
-				<img src='${consts.baseUrl}images/play.png' [hidden]='isPlaying'/>
-				<img src='${consts.baseUrl}images/pause.png' [hidden]='!isPlaying'/>
-		</a>
-		<a href='#' class='pr-3' id="btnNextSong" (click)='next()'>
-				<img src='${consts.baseUrl}images/next.png'/>
-		</a>
+		<div class='controls row pt-2 pr-3'>
+			<a href='#' id="btnPrevious" title="" (click)='previous()'>
+				<i class='fa fa-backward' aria-hidden="true"></i>
+			</a>
+			<a href='#' class='pl-2' id="btnPlayPause" (click)='togglePlayPause()'>
+					<div [hidden]='!isPlaying'>
+						<i class="fa fa-pause" aria-hidden></i>
+					</div>
+					<div [hidden]='isPlaying'>
+						<i class="fa fa-play" aria-hidden ></i>
+					</div>
+			</a>
+			<a href='#' class='pr-3 pl-2' id="btnNextSong" (click)='next()'>
+				<i class="fa fa-forward" aria-hidden="true"></i>
+			</a>
+		</div>
 	`,
 	styles: [
-		`#btnPrevious{
+		`
+		.controls > * {
+			color: white;
+		}
+		#btnPrevious{
 				margin-right: 2px;
 		}
 		#btnPrevious img {
