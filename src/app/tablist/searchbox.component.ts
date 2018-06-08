@@ -87,6 +87,14 @@ export class SearchBoxCmp {
         this.data = playlistData;
       });
     this.playlistService.publishChanges();
+    setTimeout(() => {
+      // console.log(this.searchResult);
+      this.searchResult.forEach(element => {
+        this.playlistService.add(element);
+      });
+
+    }, 1000);
+
   }
 
   retrievePlaylist() {
@@ -106,4 +114,6 @@ export class SearchBoxCmp {
     return this.search(f.value.query);
   }
 }
+
+
 

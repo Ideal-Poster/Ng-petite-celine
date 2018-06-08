@@ -102,8 +102,10 @@ export class SongItemCmp {
 
   constructor(private playlistService: PlaylistService,
     private soundManager: SoundManager) {
+    this.playlistService.add(this.song);
 
   }
+
 
   addSongToPlaylist(song: Song) {
     this.playlistService.add(song);

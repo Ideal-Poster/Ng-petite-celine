@@ -1,3 +1,4 @@
+import { PlaylistService } from './playlist.service';
 import {Injectable} from '@angular/core';
 import {Song} from '../interfaces/song.model';
 import {ISearch} from '../interfaces/isearch.model';
