@@ -5,15 +5,15 @@ import {SoundManager} from "../services/soundmanager.service";
 import {consts} from "../app.consts";
 
 @Component({
-	selector: 'song-item',
-	template: `
+  selector: 'song-item',
+  template: `
 		<div class="song-list-information-column">
-				<div class="playlist-item-title"
+				<div class="track"
 						(click)='play(song)'
 						title="Play">{{song.name}}</div>
 		</div>
 	`,
-	styles: [`
+  styles: [`
 		.song-item{
 				border-top:1px solid #cfcfcf;
 				padding: 7px 12px 7px 0px;
@@ -89,40 +89,39 @@ import {consts} from "../app.consts";
 		}
 		`]
 })
-export class SongItemCmp
-{
-	@Input('playing-song') playingSong = null;
+export class SongItemCmp {
+  @Input('playing-song') playingSong = null;
 
-	@Input() song;
+  @Input() song;
 
-	@Input("show-add") showAdd: boolean;
+  @Input("show-add") showAdd: boolean;
 
-	@Input("show-delete") showDelete: boolean;
+  @Input("show-delete") showDelete: boolean;
 
-	@Input("show-play") showPlay: boolean;
+  @Input("show-play") showPlay: boolean;
 
-	constructor(private playlistService: PlaylistService,
-							private soundManager: SoundManager) {
+  constructor(private playlistService: PlaylistService,
+    private soundManager: SoundManager) {
 
-	}
+  }
 
-	addSongToPlaylist(song: Song) {
-		this.playlistService.add(song);
-	}
+  addSongToPlaylist(song: Song) {
+    this.playlistService.add(song);
+  }
 
-	play(song: Song) {
-		this.soundManager.play(song);
-	}
+  play(song: Song) {
+    this.soundManager.play(song);
+  }
 
-	delete(song) {
-		this.playlistService.remove(song);
-	}
+  delete(song) {
+    this.playlistService.remove(song);
+  }
 
-	getSongImage(song: Song) {
-		if (song.imageUrl != null) {
-			return song.imageUrl;
-		}
-		return consts.baseUrl+'/images/artist_placeholder.png';
-	}
+  getSongImage(song: Song) {
+    if (song.imageUrl != null) {
+      return song.imageUrl;
+    }
+    return consts.baseUrl + '/images/artist_placeholder.png';
+  }
 
 }

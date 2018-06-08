@@ -31,7 +31,7 @@ import {PlayerCmp} from './player/player.component';
 import {TabListCmp} from './tablist/tablist.component';
 import {StoreService} from './services/store.service';
 import {PlaylistCmp} from './tablist/playlist.component';
-import {ControlsCmp} from "./player/controls.component";
+import {ControlsCmp} from './player/controls.component';
 import {VolumeCmp} from './player/volume.component';
 import {SongImageCmp} from './player/song-image.component';
 import {SongItemCmp} from './tablist/song-item.component';

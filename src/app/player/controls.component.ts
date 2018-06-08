@@ -6,8 +6,8 @@ import {PlaylistService} from '../services/playlist.service';
 import { consts } from '../app.consts';
 
 @Component({
-	selector: 'controls',
-	template:`
+  selector: 'controls',
+  template: `
 		<div class='controls row pt-2 pr-3'>
 			<a href='#' id="btnPrevious" title="" (click)='previous()'>
 				<i class='fa fa-backward' aria-hidden="true"></i>
@@ -25,8 +25,8 @@ import { consts } from '../app.consts';
 			</a>
 		</div>
 	`,
-	styles: [
-		`
+  styles: [
+    `
 		.controls > * {
 			color: white;
 		}
@@ -60,25 +60,25 @@ import { consts } from '../app.consts';
 				height: 30px;
 		}
 `
-	]
+  ]
 })
 export class ControlsCmp {
-	@Input("is-playing") isPlaying: boolean;
-	@Input() song: any;
+  @Input("is-playing") isPlaying: boolean;
+  @Input() song: any;
 
-	constructor(private soundManager: SoundManager) {
+  constructor(private soundManager: SoundManager) {
 
-	}
+  }
 
-	togglePlayPause() {
-		this.soundManager.togglePlayPause();
-	}
+  togglePlayPause() {
+    this.soundManager.togglePlayPause();
+  }
 
-	next() {
-		this.soundManager.next();
-	}
+  next() {
+    this.soundManager.next();
+  }
 
-	previous() {
-		this.soundManager.previous();
-	}
+  previous() {
+    this.soundManager.previous();
+  }
 }

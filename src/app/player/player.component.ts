@@ -4,7 +4,7 @@ import {SoundManager} from '../services/soundmanager.service';
 import {Song} from '../interfaces/song.model';
 import {Events} from '../interfaces/events.model';
 
-import {ControlsCmp} from "./controls.component";
+import {ControlsCmp} from './controls.component';
 import {VolumeCmp} from './volume.component';
 
 import {TimeSeekerCmp} from './time-seeker.component';
@@ -12,24 +12,24 @@ import {TimeInfoCmp} from './time-info.component';
 
 @Component({
   selector: 'player',
-	template: `
-	<div class="container-fluid fixed-top grey darken-4">
+  template: `
+	<div class="container-fluid fixed-top grey darken-4" [hidden]='!isPlaying && !isTouched'>
 		<div class="container">
 			<section class="player" style="height:55px">
-			<div class="row">
-			<div>
-				<controls [song]="song" [is-playing]="isPlaying"></controls>
-			</div>
-			<div class="pl-3 pt-2">
-				<time-info [song]="song" [time]="currentTime" [total-time]="totalTime"></time-info>
-			</div>
-				<div class="pl-3 pt-2">
-					<h2 class='song-title px-3'>{{ song.name }} - {{ song.artist }}</h2>
+				<div class="row">
+					<div>
+						<controls [song]="song" [is-playing]="isPlaying"></controls>
 					</div>
-			</div>
+					<div class="pl-3 pt-2">
+						<time-info [song]="song" [time]="currentTime" [total-time]="totalTime"></time-info>
+					</div>
+					<div class="pl-3 pt-2">
+						<h2 class='px-3 song-title' *ngIf='song'>{{ song.name }} - {{ song.artist }}</h2>
+					</div>
+				</div>
 			</section>
-			</div>
-			<time-seeker [time]="currentTime" [total-time]="totalTime"></time-seeker>
+		</div>
+		<time-seeker [time]="currentTime" [total-time]="totalTime"></time-seeker>
 	</div>
 	`,
   styles: [`
@@ -80,11 +80,12 @@ import {TimeInfoCmp} from './time-info.component';
 	}
 
 	`],
-  //directives:[NgIf, ControlsCmp, VolumeCmp, SongImageCmp, TimeSeekerCmp, TimeInfoCmp]
+  // directives:[NgIf, ControlsCmp, VolumeCmp, SongImageCmp, TimeSeekerCmp, TimeInfoCmp]
 })
 export class PlayerCmp implements OnInit {
   public song: Song;
   isPlaying: boolean;
+  isTouched = false;
   currentTime: number;
   totalTime: number;
   private soundManager: SoundManager;
@@ -105,7 +106,9 @@ export class PlayerCmp implements OnInit {
 
     this.soundManager.on(Events.Play, () => {
       this.isPlaying = true;
+      this.isTouched = true;
     });
+
 
     this.soundManager.on(Events.PlayResume, () => {
       this.isPlaying = true;

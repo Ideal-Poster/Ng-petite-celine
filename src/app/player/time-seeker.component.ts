@@ -37,8 +37,7 @@ import {Events} from '../interfaces/events.model';
 			// background-image: none !important;
 			// background-color: #fff !important;
 			// border:1px solid #ff8b00 !important;
-			top:-4px !important;
-			// width:15px !important;
+			top: 0 !important;
 			height:4px !important;
 			box-sizing: border-box;
 		}
