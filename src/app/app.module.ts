@@ -39,6 +39,8 @@ import {TimeSeekerCmp} from './player/time-seeker.component';
 import {TimeInfoCmp} from './player/time-info.component';
 import {SearchBoxCmp} from './tablist/searchbox.component';
 
+import { CookieService } from 'ngx-cookie-service';
+
 import 'rxjs/Rx';
 
 const appRoutes: Routes = [
@@ -88,7 +90,8 @@ const appRoutes: Routes = [
     PlaylistService,
     SoundManagerSoundPlayer,
     SoundManager,
-    StoreService
+    StoreService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

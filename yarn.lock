@@ -3836,6 +3836,10 @@ neo-async@^2.5.0:
   version "6.0.2"
   resolved "git+https://oauth2:UkVgW1esr64ozz7iqLci@git.mdbootstrap.com/mdb/angular/ng-pro.git#ad636a533433947a0b723a254afd892a59a50e43"
 
+ngx-cookie-service@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/ngx-cookie-service/-/ngx-cookie-service-1.0.10.tgz#dc17ff4f1a0224cf3b0c7a7f52bff2b798396e3d"
+
 ngx-cookie@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/ngx-cookie/-/ngx-cookie-3.0.1.tgz#50f3335d578a9764902cfa0d90cccba7f0f3339d"
