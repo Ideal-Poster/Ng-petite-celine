@@ -28,3 +28,7 @@ ul.menu-buttons > li > * {
 ul.menu-buttons > li > *:hover {
   color: grey;
 }
+.active {
+  color: #a4955c;
+  background: blue;
+}
