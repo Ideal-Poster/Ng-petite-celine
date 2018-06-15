@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {ISoundPlayer} from '../interfaces/isound-player.model';
-import {Song} from '../interfaces/song.model';
-import {Events} from '../interfaces/events.model';
-import {consts} from '../app.consts';
+import { Injectable } from '@angular/core';
+import { ISoundPlayer } from '../interfaces/isound-player.model';
+import { Song } from '../interfaces/song.model';
+import { Events } from '../interfaces/events.model';
+// import { consts } from '../app.consts';
 
 export declare var soundManager;
 
@@ -11,108 +11,108 @@ export declare var soundManager;
  * This class take responsiblity to play a song. Just it.
  */
 export class SoundManagerSoundPlayer implements ISoundPlayer {
-	private soundObject: any;
-	private subscribers: Object = {};
-	private lastSong: Song;
-	
-	soundCloudClientId: string = '8e1349e63dfd43dc67a63e0de3befc68';
-	constructor() {
+  private soundObject: any;
+  private subscribers: Object = {};
+  private lastSong: Song;
 
-	}
+  soundCloudClientId: string = '8e1349e63dfd43dc67a63e0de3befc68';
+  constructor() {
 
-	initialize(song: Song, callback: (e: Error, data: any) => void) {
-		if (this.lastSong) {
-			soundManager.unload(this.lastSong.idFromProvider);
-			soundManager.destroySound(this.lastSong.idFromProvider);
-		}
+  }
 
-		var soundObject = soundManager.getSoundById(song.id);
-		if (!soundObject) {
-			soundObject = soundManager.createSound({
-				url: song.streamUrl + '?client_id=' + this.soundCloudClientId,
-				id: song.idFromProvider,
-				volume: 100,
-				onbufferchange: () => this.publish(Events.BufferingStart, null),
-				ondataerror: () => this.publish(Events.AudioError, null),
-				onfinish: () => this.publish(Events.Finish, null),
-				onload: () => this.publish(Events.BufferingStart, null),
-				onpause: () => this.publish(Events.Pause, null),
-				onplay: () => this.publish(Events.Play, null),
-				onresume: () => this.publish(Events.PlayResume, null),
-				onstop: () => this.publish(Events.Finish, null),
-				whileplaying: () => {
-					var time = this.currentTime();
-					this.publish(Events.Time, time)
-				},
-			});
+  initialize(song: Song, callback: (e: Error, data: any) => void) {
+    if (this.lastSong) {
+      soundManager.unload(this.lastSong.idFromProvider);
+      soundManager.destroySound(this.lastSong.idFromProvider);
+    }
 
-			if (!soundObject) {
-				return callback(new Error('Error while create sound'), null);
-			}
+    var soundObject = soundManager.getSoundById(song.id);
+    if (!soundObject) {
+      soundObject = soundManager.createSound({
+        url: song.streamUrl + '?client_id=' + this.soundCloudClientId,
+        id: song.idFromProvider,
+        volume: 100,
+        onbufferchange: () => this.publish(Events.BufferingStart, null),
+        ondataerror: () => this.publish(Events.AudioError, null),
+        onfinish: () => this.publish(Events.Finish, null),
+        onload: () => this.publish(Events.BufferingStart, null),
+        onpause: () => this.publish(Events.Pause, null),
+        onplay: () => this.publish(Events.Play, null),
+        onresume: () => this.publish(Events.PlayResume, null),
+        onstop: () => this.publish(Events.Finish, null),
+        whileplaying: () => {
+          var time = this.currentTime();
+          this.publish(Events.Time, time)
+        },
+      });
 
-			this.lastSong = song;
-		}
+      if (!soundObject) {
+        return callback(new Error('Error while create sound'), null);
+      }
 
-		soundObject.play();
-		this.soundObject = soundObject;
-		return callback(null, song);
-	}
+      this.lastSong = song;
+    }
 
-	play() {
-		if (this.soundObject) {
-			this.soundObject.resume();
-		}
-	}
+    soundObject.play();
+    this.soundObject = soundObject;
+    return callback(null, song);
+  }
 
-	pause() {
-		if (this.soundObject) {
-			this.soundObject.pause();
-		}
-	}
+  play() {
+    if (this.soundObject) {
+      this.soundObject.resume();
+    }
+  }
 
-	seek(percent: number) {
-		if (this.soundObject) {
-			var time = this.soundObject.duration * percent / 100;
-			this.soundObject.setPosition(time);
-		}
-	}
+  pause() {
+    if (this.soundObject) {
+      this.soundObject.pause();
+    }
+  }
 
-	currentTime(): number {
-		if (!this.soundObject) return;
-		return this.soundObject.position;
-	}
+  seek(percent: number) {
+    if (this.soundObject) {
+      var time = this.soundObject.duration * percent / 100;
+      this.soundObject.setPosition(time);
+    }
+  }
 
-	totalTime():number {
-		if (!this.soundObject) return;
-		return this.soundObject.duration;
-	}
+  currentTime(): number {
+if (!this.soundObject) {return;}
+    return this.soundObject.position;
+  }
 
-	setVolume(value: number) {
-		if (!this.soundObject) return;
-		this.soundObject.setVolume(value);
-	}
+  totalTime(): number {
+if (!this.soundObject) {return;}
+    return this.soundObject.duration;
+  }
 
-	getVolume(): number {
-		if (!this.soundObject) return;
-		return this.soundObject.volume;
-	}
+  setVolume(value: number) {
+if (!this.soundObject) {return;}
+    this.soundObject.setVolume(value);
+  }
 
-	on(event, handler: () => void) {
-		if (!this.subscribers[event]) this.subscribers[event] = [];
-		this.subscribers[event].push(handler);
-	}
+  getVolume(): number {
+if (!this.soundObject) {return;}
+    return this.soundObject.volume;
+  }
 
-	publish(event, data: any) {
-		if (this.subscribers[event]) {
-			this.subscribers[event].forEach(handler => {
-				handler(data);
-			});
-		}
-	}
+  on(event, handler: (data:any) => void) {
+    if (!this.subscribers[event]) {this.subscribers[event] = [];}
+    this.subscribers[event].push(handler);
+  }
 
-	private subscribeSoundCloudPlayerEvent() {
-		if (!this.soundObject) return;
+  publish(event, data: any) {
+    if (this.subscribers[event]) {
+      this.subscribers[event].forEach(handler => {
+        handler(data);
+      });
+    }
+  }
 
-		//Do nothing because events are declared at createSoundOption
-	}
+  private subscribeSoundCloudPlayerEvent() {
+    if (!this.soundObject) {return;}
+
+    // Do nothing because events are declared at createSoundOption
+  }
 }

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -41,6 +41,7 @@ import {SearchBoxCmp} from './tablist/searchbox.component';
 
 import { CookieService } from 'ngx-cookie-service';
 
+
 import 'rxjs/Rx';
 
 const appRoutes: Routes = [
@@ -78,7 +79,9 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
-    MDBBootstrapModulePro.forRoot()
+    MDBBootstrapModulePro.forRoot(),
+    HttpClientJsonpModule,
+    ReactiveFormsModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [

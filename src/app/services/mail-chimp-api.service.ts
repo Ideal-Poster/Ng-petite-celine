@@ -6,10 +6,15 @@ import { HttpErrorHandler, HandleError } from '../../http-error-handler.service'
 import { catchError } from 'rxjs/operators';
 
 import { EmailSubscriber } from '../models/emailSubscriber';
-
+interface MailChimpResponse {
+  result: string;
+  msg: string;
+}
 @Injectable()
 export class MailChimpApiService {
   private handleError: HandleError;
+  error = '';
+  submitted = false;
 
   constructor(private http: HttpClient,
                       httpErrorHandler: HttpErrorHandler) {
@@ -17,15 +22,15 @@ export class MailChimpApiService {
     console.log('ApiService is Ready...');
   }
 
-  addSubscriber(subscriberInfo: EmailSubscriber) {
-    const body = JSON.stringify(subscriberInfo);
-    const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.post('http://localhost:3000/emailSub', body, { headers: headers })
-      .map((response: HttpResponse<EmailSubscriber>) => {
-        const result = response.body;
-        const emailSubscriber = new EmailSubscriber(result.firstName, result.lastName, result.email);
-        return emailSubscriber;
-      })
-      .pipe(catchError(this.handleError<any>()));
+  addSubscriber() {
+    const subscriberData = new FormData()
+    subscriberData.append('name', 'slib');
+    subscriberData.append('email', 'slib@jones');
+
+    return this.http.post<any>('http://localhost:3000/', { email: 'malcolm@gmail', name: 'poop' });
+  }
+
+  addMember() {
+    // this.http.post('','')
   }
 }
