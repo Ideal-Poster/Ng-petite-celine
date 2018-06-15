@@ -147,9 +147,14 @@ events-banner-container {
   width: 132%;
   height: 132%;
 }
-.video,
-.album {
+.video
+,.album
+ {
   width: 300px;
+  /* padding-top: 10vh; */
+}
+.video {
+  padding-top: 10.4vh;
 }
 
 
