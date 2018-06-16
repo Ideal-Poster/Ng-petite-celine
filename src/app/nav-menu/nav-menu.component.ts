@@ -1,3 +1,4 @@
+import { SoundManager } from './../services/soundmanager.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
   title = 'Celine';
-  constructor(r: ActivatedRoute) {
+  constructor(r: ActivatedRoute, private soundManager: SoundManager) {
       r.params.subscribe(() => {
         if (r.url['_value'].length < 1) {
           this.title = 'Celine';
@@ -21,4 +22,7 @@ export class NavMenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  stopPlayer() {
+    this.soundManager.pause();
+  }
 }

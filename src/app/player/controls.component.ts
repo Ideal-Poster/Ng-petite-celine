@@ -9,10 +9,10 @@ import { consts } from '../app.consts';
   selector: 'controls',
   template: `
 		<div class='controls row pt-2 pr-3'>
-			<a href='#' id="btnPrevious" title="" (click)='previous()'>
+			<a id="btnPrevious" title="" (click)='previous()'>
 				<i class='fa fa-backward' aria-hidden="true"></i>
 			</a>
-			<a href='#' class='pl-2' id="btnPlayPause" (click)='togglePlayPause()'>
+			<a class='pl-2' id="btnPlayPause" (click)='togglePlayPause()'>
 					<div [hidden]='!isPlaying'>
 						<i class="fa fa-pause" aria-hidden></i>
 					</div>
@@ -20,7 +20,7 @@ import { consts } from '../app.consts';
 						<i class="fa fa-play" aria-hidden ></i>
 					</div>
 			</a>
-			<a href='#' class='pr-3 pl-2' id="btnNextSong" (click)='next()'>
+			<a class='pr-3 pl-2' id="btnNextSong" (click)='next()'>
 				<i class="fa fa-forward" aria-hidden="true"></i>
 			</a>
 		</div>

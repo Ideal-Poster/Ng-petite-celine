@@ -41,6 +41,14 @@ export class SoundManager {
     });
   }
 
+  pause() {
+    if (this.currentSong != null) {
+      if (this.isPlaying) {
+        this.soundPlayer.pause();
+      }
+    }
+  }
+
   togglePlayPause() {
     if (this.currentSong != null) {
       if (!this.isPlaying) {
@@ -48,7 +56,8 @@ export class SoundManager {
       } else {
         this.soundPlayer.pause();
       }
-    } else {
+    }
+    else {
       var song = this.playlistService.first();
       this.play(song);
     }

@@ -24,7 +24,7 @@ import {TimeInfoCmp} from './time-info.component';
 						<time-info [song]="song" [time]="currentTime" [total-time]="totalTime"></time-info>
 					</div>
 					<div class="pl-3 pt-2">
-						<h2 class='px-3 song-title' *ngIf='song'>{{ song.name }} - {{ song.artist }}</h2>
+						<h2 class='px-3 song-title' style='color: white;' *ngIf='song'>{{ song.name }} - {{ song.artist }}</h2>
 					</div>
 				</div>
 			</section>
