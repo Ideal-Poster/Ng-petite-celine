@@ -46,6 +46,10 @@ h2 {
 .video {
   padding-top: 35px;
 }
+.buy-icon:hover {
+  color: #7d7246;
+}
+
 
 .purchase-icons {
   margin-top: 60px;
@@ -112,6 +116,13 @@ events-banner-container {
   height: 32.862px;
   margin-top: 34px;
   margin-left: 22px;
+}
+
+.button:hover {
+  border-color: black;
+  background: rgb(224, 220, 224);
+  color: black;
+  cursor: pointer;
 }
 
 .tickets {

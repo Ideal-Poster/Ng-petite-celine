@@ -17,6 +17,11 @@ ul.menu-buttons {
   margin-bottom: 100px;
 }
 
+.nav-icon:hover {
+  color: #7d7246;
+
+}
+
 .shadow {
   text-shadow: 4px 4px 5px rgb(40, 39, 39, 0.2);
 }
