@@ -1,17 +1,14 @@
 import { MailChimpApiService } from './../services/mail-chimp-api.service';
-import { EmailSubscriber } from './../models/emailSubscriber';
 import { FormControl, Validators, FormGroup, FormsModule, NgForm } from '@angular/forms';
-import { HttpClient, HttpParams } from '@angular/common/http';
-// import { MDBBootstrapModule, ModalDirective } from 'angular-bootstrap-md';
+import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SearchBoxCmp } from '../tablist/searchbox.component';
+import { SearchBoxComponent } from '../playlist/searchbox.component';
 import { CookieService } from 'ngx-cookie-service';
-
-
 @Component({
   selector: 'app-music-page',
   templateUrl: './music-page.component.html',
-  entryComponents: [SearchBoxCmp],
+  entryComponents: [SearchBoxComponent],
   styleUrls: ['./music-page.component.css']
 })
 export class MusicPageComponent implements OnInit {
@@ -54,27 +51,11 @@ export class MusicPageComponent implements OnInit {
 
     console.log(this.signupForm.value.userData);
     this.signupForm.reset();
-    // const subscriber = new EmailSubscriber(this.subform.value.firstname, this.subform.value.latname, this.subform.value.email);
-
-    // this.mailChimp.addSubscriber()
     this.http
       .post<{ message: string }>("http://localhost:3000/emailSub", { id: 'null', title: 'title', content: 'content' })
       .subscribe(responseData => {
         console.log(responseData.message);
-        // this.posts.push(post);
-        // this.postsUpdated.next([...this.posts]);
       });
-    // .subscribe(response => {
-    //   if (response.result && response.result !== 'error') {
-    //     this.submitted = true;
-    //   } else {
-    //     this.error = response.msg;
-    //   }
-    // }, error => {
-    //   console.error(error);
-    //   this.error = 'Sorry, an error occurred.';
-    // });
   }
-
 
 }

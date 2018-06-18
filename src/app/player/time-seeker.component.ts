@@ -43,7 +43,7 @@ import {Events} from '../interfaces/events.model';
 		}
 	`]
 })
-export class TimeSeekerCmp implements OnInit {
+export class TimeSeekerComponent implements OnInit {
   @Input() time: number;
   @Input('total-time') duration: number;
 

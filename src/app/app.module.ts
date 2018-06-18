@@ -27,22 +27,19 @@ import {PlaylistService} from './services/playlist.service';
 import {SoundCloudSearch} from './services/soundcloud-search.service';
 import {SoundManagerSoundPlayer} from './services/soundmanager-player.service';
 import {SoundManager} from './services/soundmanager.service';
-import {PlayerCmp} from './player/player.component';
-import {TabListCmp} from './tablist/tablist.component';
+import {PlayerComponent} from './player/player.component';
 import {StoreService} from './services/store.service';
-import {PlaylistCmp} from './tablist/playlist.component';
-import {ControlsCmp} from './player/controls.component';
-import {VolumeCmp} from './player/volume.component';
-import {SongImageCmp} from './player/song-image.component';
-import {SongItemCmp} from './tablist/song-item.component';
-import {TimeSeekerCmp} from './player/time-seeker.component';
-import {TimeInfoCmp} from './player/time-info.component';
-import {SearchBoxCmp} from './tablist/searchbox.component';
+import {ControlsComponent} from './player/controls.component';
+import {VolumeComponent} from './player/volume.component';
+import {SongImageComponent} from './player/song-image.component';
+import {TimeSeekerComponent} from './player/time-seeker.component';
+import {TimeInfoComponent} from './player/time-info.component';
+import {SearchBoxComponent} from './playlist/searchbox.component';
 
 import { CookieService } from 'ngx-cookie-service';
 
 
-import 'rxjs/Rx';
+// import 'rxjs/Rx';
 
 const appRoutes: Routes = [
   { path: '', component: MusicPageComponent },
@@ -59,16 +56,13 @@ const appRoutes: Routes = [
     ArtPageComponent,
     FooterComponent,
     ActingPageComponent,
-    PlaylistCmp,
-    SearchBoxCmp,
-    TabListCmp,
-    SongItemCmp,
-    PlayerCmp,
-    ControlsCmp,
-    VolumeCmp,
-    SongImageCmp,
-    TimeSeekerCmp,
-    TimeInfoCmp
+    PlayerComponent,
+    ControlsComponent,
+    VolumeComponent,
+    SongImageComponent,
+    TimeSeekerComponent,
+    TimeInfoComponent,
+    SearchBoxComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {
