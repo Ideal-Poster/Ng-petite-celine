@@ -3,12 +3,12 @@ import { FormControl, Validators, FormGroup, FormsModule, NgForm } from '@angula
 import { HttpClient } from '@angular/common/http';
 
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SearchBoxComponent } from '../playlist/searchbox.component';
+import { PlaylistComponent } from '../playlist/playlist.component';
 import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-music-page',
   templateUrl: './music-page.component.html',
-  entryComponents: [SearchBoxComponent],
+  entryComponents: [PlaylistComponent],
   styleUrls: ['./music-page.component.css']
 })
 export class MusicPageComponent implements OnInit {

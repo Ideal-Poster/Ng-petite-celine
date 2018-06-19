@@ -34,10 +34,9 @@ import {VolumeComponent} from './player/volume.component';
 import {SongImageComponent} from './player/song-image.component';
 import {TimeSeekerComponent} from './player/time-seeker.component';
 import {TimeInfoComponent} from './player/time-info.component';
-import {SearchBoxComponent} from './playlist/searchbox.component';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 import { CookieService } from 'ngx-cookie-service';
-
 
 // import 'rxjs/Rx';
 
@@ -62,7 +61,7 @@ const appRoutes: Routes = [
     SongImageComponent,
     TimeSeekerComponent,
     TimeInfoComponent,
-    SearchBoxComponent
+    PlaylistComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {
