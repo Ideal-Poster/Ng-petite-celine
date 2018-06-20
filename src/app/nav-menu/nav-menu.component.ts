@@ -1,13 +1,13 @@
 import { SoundManager } from './../services/soundmanager.service';
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.css']
 })
-export class NavMenuComponent implements OnInit {
+export class NavMenuComponent {
   title = 'Celine';
   constructor(r: ActivatedRoute, private soundManager: SoundManager) {
       r.params.subscribe(() => {
@@ -17,9 +17,6 @@ export class NavMenuComponent implements OnInit {
           r.url['_value'][0].path === 'art' ? this.title = 'Gallery' : this.title = 'Actress';
         }
       });
-  }
-
-  ngOnInit() {
   }
 
   stopPlayer() {

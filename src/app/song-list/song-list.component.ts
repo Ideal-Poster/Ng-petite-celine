@@ -1,15 +1,13 @@
 import { SoundManager } from './../services/soundmanager.service';
-import {Component, EventEmitter, Output, Input} from '@angular/core';
-import {ISearch} from '../interfaces/isearch.model';
-// import {consts} from '../app.consts';
-import {PlaylistService} from '../services/playlist.service';
-import {Song} from '../interfaces/song.model';
-import {SoundCloudSearch} from '../services/soundcloud-search.service';
-import { NgForm  } from '@angular/forms';
+import { Component } from '@angular/core';
+import { ISearch } from '../interfaces/isearch.model';
+import { PlaylistService } from '../services/playlist.service';
+import { Song } from '../interfaces/song.model';
+import { SoundCloudSearch } from '../services/soundcloud-search.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'search-box',
-  // entryComponents: [SongItemCmp],
   template: `
 		<div *ngFor="let song of searchResult let i = index;" [song]="song" [show-add]="true" [show-play]="true">
 			<div class="track{{i}}"
@@ -19,26 +17,16 @@ import { NgForm  } from '@angular/forms';
 	`,
   styles: [``]
 })
-export class SongListComponent {
 
-  searchResult: any = [];
+export class SongListComponent {
   private searchClient: ISearch;
   private showAdd = true;
-  // playlistService: PlaylistService;
+  searchResult: any = [];
   data: Array < any > ;
 
   constructor(private playlistService: PlaylistService, private soundCloudSearch: SoundCloudSearch, private soundManager: SoundManager) {
     this.playlistService = playlistService;
-
-    /*this.keyword.valueChanges
-    			.debounceTime(400)
-    			.distinctUntilChanged()
-    			.flatMap(keywordStr => this.soundCloudSearch.search(keywordStr.toString()))
-    			.subscribe(data => {
-    				this.searchResult = data;
-    			});*/
     this.search('e');
-
     this.playlistService
       .getAll()
       .subscribe(playlistData => {
@@ -50,10 +38,8 @@ export class SongListComponent {
       this.searchResult.forEach(element => {
         this.playlistService.add(element);
       });
-
     }, 1000);
-
-	}
+  }
 
   play(song: Song) {
     this.soundManager.play(song);
@@ -72,6 +58,3 @@ export class SongListComponent {
     return this.search(f.value.query);
   }
 }
-
-
-

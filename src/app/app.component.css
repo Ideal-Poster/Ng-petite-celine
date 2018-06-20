@@ -1,5 +1,7 @@
 :host {
+  font-family: 'Greycliff-Regular';
   width: 100%;
+  color: #e0dce0;
 }
 
 :host /deep/ ul {
@@ -8,18 +10,11 @@
   padding: 0;
 }
 
-:host {
-  color: #e0dce0;
-  font-family: 'Greycliff-Regular';
-}
 :host /deep/.header {
-  /* padding-top: 185px; */
-
   margin-top: 23.75vh;
   padding-bottom: 65px;
   font-family: 'Cardo', serif;
   font-size: 113px;
-  /* color: #e0dce0; */
   line-height: 0.659;
 }
 

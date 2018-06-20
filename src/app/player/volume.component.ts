@@ -11,25 +11,10 @@ import {consts} from '../app.consts';
 			<img src='${consts.baseUrl}images/mute.png' [hidden]='!isMute'/>
 		</a>
 	`,
-  styles: [`
-
-		#btnToggleVolume {
-				width:20px;
-		}
-		#btnToggleVolume img{
-				width:20px;
-				padding-top:15px;
-		}
-
-		#btnToggleVolume i{
-				margin-top:13px;
-				color:#c7b4ab;
-		}
-	`]
+  styles: [``]
 })
 
 export class VolumeComponent {
-
   isMute = false;
 
   constructor(private soundManager: SoundManager) {
@@ -41,5 +26,4 @@ export class VolumeComponent {
   toggleMute() {
     this.soundManager.toggleMute();
   }
-
 }

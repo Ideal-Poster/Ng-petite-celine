@@ -2,7 +2,7 @@ import { MailChimpApiService } from './../services/mail-chimp-api.service';
 import { FormControl, Validators, FormGroup, FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SongListComponent } from '../song-list/song-list';
+import { SongListComponent } from '../song-list/song-list.component';
 import { CookieService } from 'ngx-cookie-service';
 
 

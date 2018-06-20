@@ -9,35 +9,33 @@ import { AppComponent } from './app.component';
 
 import { HttpErrorHandler } from '../http-error-handler.service';
 import { MailChimpApiService } from './services/mail-chimp-api.service';
-
 import { MessageService } from '../message.service';
-
-import { MusicPageComponent } from './music-page/music-page.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { ArtPageComponent } from './art-page/art-page.component';
-
-import { MDBBootstrapModule } from './typescripts/free';
-import { MDBBootstrapModulePro } from './typescripts/pro/index';
-import { MDBSpinningPreloader } from './typescripts/pro/index';
-
-import { FooterComponent } from './footer/footer.component';
-import { ActingPageComponent } from './acting-page/acting-page.component';
 
 import {PlaylistService} from './services/playlist.service';
 import {SoundCloudSearch} from './services/soundcloud-search.service';
 import {SoundManagerSoundPlayer} from './services/soundmanager-player.service';
 import {SoundManager} from './services/soundmanager.service';
-import {PlayerComponent} from './player/player.component';
 import {StoreService} from './services/store.service';
+
+import { CookieService } from 'ngx-cookie-service';
+
+import { MusicPageComponent } from './music-page/music-page.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { ArtPageComponent } from './art-page/art-page.component';
+import { ActingPageComponent } from './acting-page/acting-page.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { MDBBootstrapModule } from './typescripts/free';
+import { MDBBootstrapModulePro } from './typescripts/pro/index';
+import { MDBSpinningPreloader } from './typescripts/pro/index';
+
+import {PlayerComponent} from './player/player.component';
 import {ControlsComponent} from './player/controls.component';
 import {VolumeComponent} from './player/volume.component';
 import {SongImageComponent} from './player/song-image.component';
 import {TimeSeekerComponent} from './player/time-seeker.component';
 import {TimeInfoComponent} from './player/time-info.component';
-import { SongListComponent } from './song-list/song-list';
-
-import { CookieService } from 'ngx-cookie-service';
-
+import { SongListComponent } from './song-list/song-list.component';
 
 import 'rxjs/Rx';
 

@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  template: `
+  <footer class="footer footer-copyright pt-2 pb-3 text-center text-white">
+    © 2018 Copyright: Petite Celine
+  </footer>
+`,
+  styles: [`
+    .footer {
+      background: #1C1820;
+    }
+  `]
 })
-export class FooterComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class FooterComponent {
+  constructor() {}
 }
