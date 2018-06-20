@@ -53,8 +53,8 @@ export class SongListComponent {
       });
   }
 
-  onSubmit(f: NgForm) {
-    console.log(f);
-    return this.search(f.value.query);
-  }
+  // onSubmit(f: NgForm) {
+  //   console.log(f);
+  //   return this.search(f.value.query);
+  // }
 }

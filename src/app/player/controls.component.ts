@@ -1,10 +1,5 @@
-import {Component, Input} from "@angular/core";
-//import {Song} from './interfaces/Song.ts';
-import {Events} from '../interfaces/events.model';
+import {Component, Input} from '@angular/core';
 import {SoundManager} from '../services/soundmanager.service';
-import {PlaylistService} from '../services/playlist.service';
-import { consts } from '../app.consts';
-
 @Component({
   selector: 'controls',
   template: `
@@ -25,50 +20,14 @@ import { consts } from '../app.consts';
 			</a>
 		</div>
 	`,
-  styles: [
-    `
-		.controls > * {
-			color: white;
-		}
-		#btnPrevious{
-				margin-right: 2px;
-		}
-		#btnPrevious img {
-				width:30px;
-				height:30px;
-				margin-top:4px;
-		}
-
-		#btnPlayPause{
-				box-sizing: border-box;
-				margin-right: 2px;
-		}
-
-		#btnPlayPause img{
-				width:40px;
-				height:40px;
-		}
-
-		#btnNextSong{
-				position: relative;
-				box-sizing: border-box;
-		}
-
-		#btnNextSong img{
-				margin-top: 4px;
-				width: 30px;
-				height: 30px;
-		}
-`
-  ]
+  styles: [``]
 })
+
 export class ControlsComponent {
-  @Input("is-playing") isPlaying: boolean;
+  @Input('is-playing') isPlaying: boolean;
   @Input() song: any;
 
-  constructor(private soundManager: SoundManager) {
-
-  }
+  constructor(private soundManager: SoundManager) {}
 
   togglePlayPause() {
     this.soundManager.togglePlayPause();

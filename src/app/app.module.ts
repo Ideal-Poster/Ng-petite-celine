@@ -37,8 +37,6 @@ import {TimeSeekerComponent} from './player/time-seeker.component';
 import {TimeInfoComponent} from './player/time-info.component';
 import { SongListComponent } from './song-list/song-list.component';
 
-import 'rxjs/Rx';
-
 const appRoutes: Routes = [
   { path: '', component: MusicPageComponent },
   { path: 'art', component: ArtPageComponent },

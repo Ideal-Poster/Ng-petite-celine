@@ -3,10 +3,29 @@ import { ImageModalComponent} from 'ng-mdb-pro/pro/lightbox';
 
 @Component({
   selector: 'app-art-page',
-  templateUrl: './art-page.component.html',
-  styleUrls: ['./art-page.component.css']
+  template: `
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 purple darken-3">
+          <app-nav-menu></app-nav-menu>
+        </div>
+
+        <div class="col-sm-8 wow fadeIn"style="padding-top: 13.75vh;">
+          <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
+        </div>
+      </div>
+    </div>
+  `,
+  styles: [`
+    :host {
+      display: block;
+      background: #1c1820;
+      min-height: 100vh;
+    }
+  `]
 })
-export class ArtPageComponent implements OnInit {
+
+export class ArtPageComponent {
   title = 'Gallery';
   imagesBasic = [{
       img: 'https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg',
@@ -65,9 +84,6 @@ export class ArtPageComponent implements OnInit {
     this.el.prevImage();
   }
 
-
   constructor() {}
-
-  ngOnInit() {}
 
 }
