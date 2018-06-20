@@ -62,7 +62,7 @@ import { consts } from '../app.consts';
 `
   ]
 })
-export class ControlsCmp {
+export class ControlsComponent {
   @Input("is-playing") isPlaying: boolean;
   @Input() song: any;
 

@@ -4,11 +4,11 @@ import {SoundManager} from '../services/soundmanager.service';
 import {Song} from '../interfaces/song.model';
 import {Events} from '../interfaces/events.model';
 
-import {ControlsCmp} from './controls.component';
-import {VolumeCmp} from './volume.component';
+import { ControlsComponent } from './controls.component';
+import { VolumeComponent } from './volume.component';
 
-import {TimeSeekerCmp} from './time-seeker.component';
-import {TimeInfoCmp} from './time-info.component';
+import { TimeSeekerComponent } from './time-seeker.component';
+import { TimeInfoComponent } from './time-info.component';
 
 @Component({
   selector: 'player',
@@ -80,9 +80,8 @@ import {TimeInfoCmp} from './time-info.component';
 	}
 
 	`],
-  // directives:[NgIf, ControlsCmp, VolumeCmp, SongImageCmp, TimeSeekerCmp, TimeInfoCmp]
 })
-export class PlayerCmp implements OnInit {
+export class PlayerComponent implements OnInit {
   public song: Song;
   isPlaying: boolean;
   isTouched = false;

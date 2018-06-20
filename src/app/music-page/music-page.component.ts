@@ -2,14 +2,14 @@ import { MailChimpApiService } from './../services/mail-chimp-api.service';
 import { FormControl, Validators, FormGroup, FormsModule, NgForm } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SearchBoxCmp } from '../playlist/searchbox.component';
+import { SongListComponent } from '../song-list/song-list';
 import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({
   selector: 'app-music-page',
   templateUrl: './music-page.component.html',
-  entryComponents: [SearchBoxCmp],
+  entryComponents: [SongListComponent],
   styleUrls: ['./music-page.component.css']
 })
 export class MusicPageComponent implements OnInit {

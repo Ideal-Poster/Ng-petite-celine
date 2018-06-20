@@ -27,14 +27,14 @@ import {PlaylistService} from './services/playlist.service';
 import {SoundCloudSearch} from './services/soundcloud-search.service';
 import {SoundManagerSoundPlayer} from './services/soundmanager-player.service';
 import {SoundManager} from './services/soundmanager.service';
-import {PlayerCmp} from './player/player.component';
+import {PlayerComponent} from './player/player.component';
 import {StoreService} from './services/store.service';
-import {ControlsCmp} from './player/controls.component';
-import {VolumeCmp} from './player/volume.component';
-import {SongImageCmp} from './player/song-image.component';
-import {TimeSeekerCmp} from './player/time-seeker.component';
-import {TimeInfoCmp} from './player/time-info.component';
-import {SearchBoxCmp} from './playlist/searchbox.component';
+import {ControlsComponent} from './player/controls.component';
+import {VolumeComponent} from './player/volume.component';
+import {SongImageComponent} from './player/song-image.component';
+import {TimeSeekerComponent} from './player/time-seeker.component';
+import {TimeInfoComponent} from './player/time-info.component';
+import { SongListComponent } from './song-list/song-list';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -56,13 +56,13 @@ const appRoutes: Routes = [
     ArtPageComponent,
     FooterComponent,
     ActingPageComponent,
-    SearchBoxCmp,
-    PlayerCmp,
-    ControlsCmp,
-    VolumeCmp,
-    SongImageCmp,
-    TimeSeekerCmp,
-    TimeInfoCmp
+    SongListComponent,
+    PlayerComponent,
+    ControlsComponent,
+    VolumeComponent,
+    SongImageComponent,
+    TimeSeekerComponent,
+    TimeInfoComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {

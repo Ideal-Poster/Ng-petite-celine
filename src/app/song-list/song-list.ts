@@ -19,7 +19,7 @@ import { NgForm  } from '@angular/forms';
 	`,
   styles: [``]
 })
-export class SearchBoxCmp {
+export class SongListComponent {
 
   searchResult: any = [];
   private searchClient: ISearch;
