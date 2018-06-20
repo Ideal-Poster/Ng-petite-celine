@@ -4,8 +4,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SongListComponent } from '../song-list/song-list.component';
 import { CookieService } from 'ngx-cookie-service';
-
-
 @Component({
   selector: 'app-music-page',
   templateUrl: './music-page.component.html',
@@ -18,12 +16,11 @@ export class MusicPageComponent implements OnInit {
 	error = '';
   title = 'Celine';
   isModalShown: boolean;
-  mailChimpEndpoint = 'https://petiteceline.us17.list-manage.com/subscribe/post-json?u=4c131a3932ca2dd768c590f9b&amp;id=c760b1311e';
+  // mailChimpEndpoint = 'https://petiteceline.us17.list-manage.com/subscribe/post-json?u=4c131a3932ca2dd768c590f9b&amp;id=c760b1311e';
   submitted = false;
   signupForm: FormGroup;
 
   constructor(private cookieService: CookieService, private http: HttpClient, private mailChimp: MailChimpApiService) {
-
     if (!cookieService.check('modalCookie')) {
       this.isModalShown = true;
       console.log(cookieService.get('modal'));
@@ -32,7 +29,6 @@ export class MusicPageComponent implements OnInit {
     } else {
       this.isModalShown = false;
     }
-
   }
 
   ngOnInit() {
@@ -45,7 +41,6 @@ export class MusicPageComponent implements OnInit {
     this.signupForm.statusChanges.subscribe(
       (status) => console.log(status)
     );
-
   }
 
   onSubmit() {
@@ -53,8 +48,6 @@ export class MusicPageComponent implements OnInit {
     console.log(this.signupForm.value.userData);
     this.signupForm.reset();
     // const subscriber = new EmailSubscriber(this.subform.value.firstname, this.subform.value.latname, this.subform.value.email);
-
-    // this.mailChimp.addSubscriber()
     this.http
       .post<{ message: string }>("http://localhost:3000/emailSub", { id: 'null', title: 'title', content: 'content' })
       .subscribe(responseData => {

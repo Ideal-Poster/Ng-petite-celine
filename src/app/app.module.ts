@@ -32,7 +32,6 @@ import { MDBSpinningPreloader } from './typescripts/pro/index';
 import {PlayerComponent} from './player/player.component';
 import {ControlsComponent} from './player/controls.component';
 import {VolumeComponent} from './player/volume.component';
-import {SongImageComponent} from './player/song-image.component';
 import {TimeSeekerComponent} from './player/time-seeker.component';
 import {TimeInfoComponent} from './player/time-info.component';
 import { SongListComponent } from './song-list/song-list.component';
@@ -56,7 +55,6 @@ const appRoutes: Routes = [
     PlayerComponent,
     ControlsComponent,
     VolumeComponent,
-    SongImageComponent,
     TimeSeekerComponent,
     TimeInfoComponent
   ],

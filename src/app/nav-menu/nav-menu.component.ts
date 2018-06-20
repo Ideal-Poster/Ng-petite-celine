@@ -1,12 +1,12 @@
 import { SoundManager } from './../services/soundmanager.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.css']
 })
+
 export class NavMenuComponent {
   title = 'Celine';
   constructor(r: ActivatedRoute, private soundManager: SoundManager) {

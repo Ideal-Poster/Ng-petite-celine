@@ -1,6 +1,4 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
-import { ImageModalComponent} from 'ng-mdb-pro/pro/lightbox';
-
 @Component({
   selector: 'app-art-page',
   template: `
