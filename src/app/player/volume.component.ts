@@ -28,7 +28,7 @@ import {consts} from '../app.consts';
 	`]
 })
 
-export class VolumeComponent {
+export class VolumeCmp {
 
   isMute = false;
 

@@ -13,7 +13,7 @@ import {Component, Input} from '@angular/core';
 		</div>
 	`
 })
-export class TimeInfoComponent {
+export class TimeInfoCmp {
   @Input('time') currentTime;
   @Input('total-time') totalTime;
   @Input('song') song;

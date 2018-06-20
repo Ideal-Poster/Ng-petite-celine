@@ -1,30 +1,29 @@
 import { SoundManager } from './../services/soundmanager.service';
-import { Component } from '@angular/core';
-import { ISearch } from '../interfaces/isearch.model';
-import { consts } from '../app.consts';
-import { PlaylistService } from '../services/playlist.service';
-import { Song } from '../interfaces/song.model';
-import { SoundCloudSearch } from '../services/soundcloud-search.service';
-import { NgForm } from '@angular/forms';
-
+import {Component, EventEmitter, Output, Input} from '@angular/core';
+import {ISearch} from '../interfaces/isearch.model';
+// import {consts} from '../app.consts';
+import {PlaylistService} from '../services/playlist.service';
+import {Song} from '../interfaces/song.model';
+import {SoundCloudSearch} from '../services/soundcloud-search.service';
+import { NgForm  } from '@angular/forms';
 
 @Component({
   selector: 'search-box',
+  // entryComponents: [SongItemCmp],
   template: `
-	<div>
-    <div *ngFor="let song of searchResult" [song]="song" [show-add]="true" [show-play]="true">
-      <div class="track{{i}}"
-      (click)='play(song)' title="Play">{{song.name}}</div>
-    </div>
-	</div>
+		<div *ngFor="let song of searchResult let i = index;" [song]="song" [show-add]="true" [show-play]="true">
+			<div class="track{{i}}"
+			(click)='play(song)'
+			title="Play">{{song.name}}</div>
+		</div>
 	`,
   styles: [``]
 })
-export class SearchBoxComponent {
+export class SearchBoxCmp {
 
   searchResult: any = [];
   private searchClient: ISearch;
-  private showAdd: boolean = true;
+  private showAdd = true;
   // playlistService: PlaylistService;
   data: Array < any > ;
 
@@ -54,11 +53,7 @@ export class SearchBoxComponent {
 
     }, 1000);
 
-  }
-
-  retrievePlaylist() {
-
-  }
+	}
 
   play(song: Song) {
     this.soundManager.play(song);
@@ -77,3 +72,6 @@ export class SearchBoxComponent {
     return this.search(f.value.query);
   }
 }
+
+
+

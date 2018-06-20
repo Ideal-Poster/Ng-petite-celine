@@ -19,7 +19,7 @@ import {consts} from "../app.consts";
 	}
 	`]
 })
-export class SongImageComponent {
+export class SongImageCmp {
 	@Input() song: any;
 
 	private DefaultImageUrl = consts.baseUrl+"images/artist_placeholder.png";

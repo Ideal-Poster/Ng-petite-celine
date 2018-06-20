@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
 import { catchError } from 'rxjs/operators';
 
-import { EmailSubscriber } from '../models/emailSubscriber';
+// import { EmailSubscriber } from '../models/emailSubscriber';
 interface MailChimpResponse {
   result: string;
   msg: string;
