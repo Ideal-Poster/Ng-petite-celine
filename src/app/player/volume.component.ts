@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {SoundManager} from '../services/soundmanager.service';
 import {Events} from '../interfaces/events.model';
 import {consts} from '../app.consts';
-
 @Component({
   selector: 'volume',
   template: `

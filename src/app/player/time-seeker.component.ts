@@ -1,7 +1,6 @@
 import {Component, ElementRef, OnInit, Input} from '@angular/core';
 import {SoundManager} from '../services/soundmanager.service';
 import {Events} from '../interfaces/events.model';
-
 @Component({
   selector: 'time-seeker',
   template: `
@@ -33,16 +32,13 @@ import {Events} from '../interfaces/events.model';
 
 		#sliderHandler{
 			position: absolute;
-			// border-radius: 100px;
-			// background-image: none !important;
-			// background-color: #fff !important;
-			// border:1px solid #ff8b00 !important;
 			top: 0 !important;
 			height:4px !important;
 			box-sizing: border-box;
 		}
 	`]
 })
+
 export class TimeSeekerComponent implements OnInit {
   @Input() time: number;
   @Input('total-time') duration: number;

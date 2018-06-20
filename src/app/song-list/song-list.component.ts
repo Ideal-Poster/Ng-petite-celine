@@ -4,8 +4,6 @@ import { ISearch } from '../interfaces/isearch.model';
 import { PlaylistService } from '../services/playlist.service';
 import { Song } from '../interfaces/song.model';
 import { SoundCloudSearch } from '../services/soundcloud-search.service';
-import { NgForm } from '@angular/forms';
-
 @Component({
   selector: 'search-box',
   template: `

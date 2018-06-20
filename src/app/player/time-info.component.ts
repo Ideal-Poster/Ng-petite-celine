@@ -18,9 +18,7 @@ export class TimeInfoComponent {
   @Input('total-time') totalTime;
   @Input('song') song;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   formatTime(time: number) {
     if (!this.song || !this.currentTime || !this.totalTime) {
