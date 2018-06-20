@@ -49,7 +49,7 @@ export class MusicPageComponent implements OnInit {
     this.signupForm.reset();
     // const subscriber = new EmailSubscriber(this.subform.value.firstname, this.subform.value.latname, this.subform.value.email);
     this.http
-      .post<{ message: string }>("http://localhost:3000/emailSub", { id: 'null', title: 'title', content: 'content' })
+      .post<{ message: string }>('http://localhost:3000/emailSub', { id: 'null', title: 'title', content: 'content' })
       .subscribe(responseData => {
         console.log(responseData.message);
         // this.posts.push(post);

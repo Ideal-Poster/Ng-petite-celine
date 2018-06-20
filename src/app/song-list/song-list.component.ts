@@ -7,18 +7,32 @@ import { SoundCloudSearch } from '../services/soundcloud-search.service';
 @Component({
   selector: 'search-box',
   template: `
-		<div *ngFor="let song of searchResult let i = index;" [song]="song" [show-add]="true" [show-play]="true">
-			<div class="track{{i}}"
+		<div *ngFor="let song of searchResult let i = index;" [song]="song">
+			<div id="track{{i}}"
 			(click)='play(song)'
 			title="Play">{{song.name}}</div>
 		</div>
 	`,
-  styles: [``]
+  styles: [`
+    #track0:hover,
+    #track1:hover,
+    #track2:hover,
+    #track3:hover,
+    #track4:hover,
+    #track5:hover,
+    #track6:hover,
+    #track7:hover,
+    #track8:hover,
+    #track9:hover,
+    #track0:hover {
+      color: white;
+      cursor: pointer;
+    }
+  `]
 })
 
 export class SongListComponent {
   private searchClient: ISearch;
-  private showAdd = true;
   searchResult: any = [];
   data: Array < any > ;
 

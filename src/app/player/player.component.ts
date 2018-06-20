@@ -12,7 +12,7 @@ import { TimeInfoComponent } from './time-info.component';
 @Component({
   selector: 'player',
   template: `
-		<div class="container-fluid fixed-top grey darken-4" [hidden]='!isPlaying && !isTouched'>
+		<div class="container-fluid fixed-top player-background" [hidden]='!isPlaying && !isTouched'>
 			<div class="container">
 				<section class="player" style="height:55px">
 					<div class="row">
@@ -34,6 +34,7 @@ import { TimeInfoComponent } from './time-info.component';
   styles: [`
 	:host {
 		z-index: 10;
+		background: #1C1820;
 	}
 
 	.player{
@@ -49,6 +50,10 @@ import { TimeInfoComponent } from './time-info.component';
 		padding-bottom: 0;
 		color:#000;
 		margin-bottom: 7px;
+	}
+
+	.player-background {
+		background: rgb(67, 46, 89);
 	}
 	`],
 })

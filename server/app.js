@@ -20,11 +20,7 @@ app.use((req, res, next) => {
 });
 
 app.post("/emailSub", (req, res, next) => {
-  // const post = req.body;
-  // console.log(post);
-
   var request = require("request");
-
   var options = { method: 'POST',
     url: 'https://petiteceline.us17.list-manage.com/subscribe/post',
     qs: { u: '4c131a3932ca2dd768c590f9b', 'amp;id': 'c760b1311e' },
@@ -39,8 +35,6 @@ app.post("/emailSub", (req, res, next) => {
 
     console.log(body);
   });
-
-
 
   res.status(201).json({
     message: 'Post added successfully'

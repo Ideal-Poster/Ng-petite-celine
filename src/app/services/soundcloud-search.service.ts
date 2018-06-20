@@ -8,23 +8,23 @@ import {Observable}     from 'rxjs/Observable';
 @Injectable()
 export class SoundCloudSearch implements ISearch {
 
-  private clientId: string = '8e1349e63dfd43dc67a63e0de3befc68';
+  private clientId = '8e1349e63dfd43dc67a63e0de3befc68';
   private playlistUri = 'http://api.soundcloud.com/playlists/50986230?linked_partitioning=1&client_id=' + this.clientId;
   constructor(private http: Http) {}
 
   search(keyword: string): any {
-    var uri = this.playlistUri;
+    const uri = this.playlistUri;
 
     return this.http.get(uri)
-      .map(res => this.handleResponse(res))
+      .map(res => this.handleResponse(res));
   }
 
   handleResponse(res: any): any {
-    var data = res.json();
-    var result = [];
+    const data = res.json();
+    const result = [];
     if (data && data.tracks) {
       data.tracks.forEach(function (item) {
-        var song: Song = < Song > {};
+        const song: Song = < Song > {};
         song.streamUrl = item.stream_url;
         song.name = item.title;
         song.artist = item.user.username;
