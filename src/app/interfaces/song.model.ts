@@ -8,4 +8,5 @@ export interface Song {
   duration: number;
   imageUrl: string;
   link: string;
+  index: number;
 }

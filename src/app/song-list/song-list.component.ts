@@ -1,3 +1,5 @@
+import { OnInit } from '@angular/core';
+// import { element } from 'protractor';
 import { SoundManager } from './../services/soundmanager.service';
 import { Component } from '@angular/core';
 import { ISearch } from '../interfaces/isearch.model';
@@ -7,11 +9,12 @@ import { SoundCloudSearch } from '../services/soundcloud-search.service';
 @Component({
   selector: 'search-box',
   template: `
-		<div *ngFor="let song of searchResult let i = index;" [song]="song">
-			<div id="track{{i}}"
+		<div *ngFor="let song of searchResult let i = index;" id="tracks" [song]="song">
+      <div id="track{{i}}"
+      class="track"
 			(click)='play(song)'
 			title="Play">{{song.name}}</div>
-		</div>
+    </div>
 	`,
   styles: [`
     #track0:hover,
@@ -28,16 +31,24 @@ import { SoundCloudSearch } from '../services/soundcloud-search.service';
       color: white;
       cursor: pointer;
     }
+    .active {
+      color: white;
+    }
+    .inactive {
+      color: grey;
+    }
   `]
 })
 
-export class SongListComponent {
+export class SongListComponent implements OnInit {
   private searchClient: ISearch;
   searchResult: any = [];
   data: Array < any > ;
+  // lastSongPlayed: number;
 
   constructor(private playlistService: PlaylistService, private soundCloudSearch: SoundCloudSearch, private soundManager: SoundManager) {
-    this.playlistService = playlistService;
+    // this.playlistService = playlistService;
+
     this.search('e');
     this.playlistService
       .getAll()
@@ -53,8 +64,24 @@ export class SongListComponent {
     }, 1000);
   }
 
+  ngOnInit() {
+
+  }
+
   play(song: Song) {
     this.soundManager.play(song);
+    // let tracks = document.getElementsByClassName("track"); // Array of tracks
+
+    // Array.prototype.filter.call(tracks, function(tracks) {
+    //   tracks.classList.replace('active' ,'inactive');
+    // });
+
+    // tracks[song.index].classList.add('active');
+    // console.log(song.index);
+
+    // var testTarget = parentDOM.getElementsByClassName("track")[4]; // here , this element is target
+    // console.log(testTarget); // <p class="test">hello word2</p>
+
   }
 
   search(keyword: string) {

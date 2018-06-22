@@ -22,6 +22,7 @@ export class SoundCloudSearch implements ISearch {
   handleResponse(res: any): any {
     const data = res.json();
     const result = [];
+    let index = 0;
     if (data && data.tracks) {
       data.tracks.forEach(function (item) {
         const song: Song = < Song > {};
@@ -33,7 +34,9 @@ export class SoundCloudSearch implements ISearch {
         song.duration = item.duration;
         song.imageUrl = item.artwork_url;
         song.link = item.permalink_url;
+        song.index = index;
         result.push(song);
+        index++;
       });
     }
     return result;

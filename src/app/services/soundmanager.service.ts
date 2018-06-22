@@ -39,6 +39,20 @@ export class SoundManager {
         alert(e.message);
       }
     });
+
+    this.activeHighlight(song);
+
+  }
+
+  activeHighlight(song) {
+    let tracks = document.getElementsByClassName("track"); // Array of tracks
+
+    Array.prototype.filter.call(tracks, function(tracks) {
+      tracks.classList.replace('active' ,'inactive');
+    });
+
+    tracks[song.index].classList.add('active');
+    console.log(song.index);
   }
 
   pause() {
