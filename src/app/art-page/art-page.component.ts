@@ -2,14 +2,26 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 @Component({
   selector: 'app-art-page',
   template: `
-    <div class="container">
-      <div class="row">
-        <div class="d-none d-md-block col-sm-4 purple darken-3">
-          <app-nav-menu></app-nav-menu>
-        </div>
 
-        <div class="col-md-8 wow fadeIn"style="padding-top: 13.75vh;">
-          <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
+    <div style="position: relative;">
+    <div class="poop"
+      style="
+      position: absolute;
+      height: 100%;
+      left: -20;
+      width:30%;
+      background: rgb(67, 46, 89);">
+    </div>
+      <div class="container">
+
+        <div class="row">
+          <div class="d-none d-md-block col-sm-4" style="background: rgb(67, 46, 89)">
+            <app-nav-menu></app-nav-menu>
+          </div>
+
+          <div class="col-md-8 wow fadeIn"style="padding-top: 13.75vh;">
+            <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
+          </div>
         </div>
       </div>
     </div>
