@@ -7,7 +7,7 @@ import { PlaylistService } from '../services/playlist.service';
 import { Song } from '../interfaces/song.model';
 import { SoundCloudSearch } from '../services/soundcloud-search.service';
 @Component({
-  selector: 'search-box',
+  selector: 'song-list',
   template: `
 		<div *ngFor="let song of searchResult let i = index;" id="tracks" [song]="song">
       <div id="track{{i}}"

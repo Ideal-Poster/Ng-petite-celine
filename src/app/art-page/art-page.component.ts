@@ -4,11 +4,11 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
   template: `
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 purple darken-3">
+        <div class="d-none d-md-block col-sm-4 purple darken-3">
           <app-nav-menu></app-nav-menu>
         </div>
 
-        <div class="col-sm-8 wow fadeIn"style="padding-top: 13.75vh;">
+        <div class="col-md-8 wow fadeIn"style="padding-top: 13.75vh;">
           <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
         </div>
       </div>
@@ -36,18 +36,18 @@ export class ArtPageComponent {
       description: 'Image 2'
     },
     {
-      img: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
-      thumb: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
+      img: 'https://images.freeimages.com/images/large-previews/476/chicago-night-traffic-1447010.jpg',
+      thumb: 'https://images.freeimages.com/images/large-previews/476/chicago-night-traffic-1447010.jpg',
       description: 'Image 3'
     },
     {
-      img: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
-      thumb: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
+      img: 'https://images.freeimages.com/images/large-previews/0d6/blue-flowers-with-macro-4-1400913.jpg',
+      thumb: 'https://images.freeimages.com/images/large-previews/0d6/blue-flowers-with-macro-4-1400913.jpg',
       description: 'Image 4'
     },
     {
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg',
-      thumb: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg',
+      img: 'https://images.freeimages.com/images/large-previews/3d3/droplets-1395002.jpg',
+      thumb: 'https://images.freeimages.com/images/large-previews/3d3/droplets-1395002.jpg',
       description: 'Image 5'
     },
     {

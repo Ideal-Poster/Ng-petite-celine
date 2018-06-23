@@ -1,3 +1,8 @@
+:host {
+  display: block;
+  max-width: 100vw;
+}
+
 .mail-modal {
   margin-top: 20vh;
   border-width: 5.5px;
@@ -101,6 +106,10 @@ events-banner-container {
   font-size: 39px;
 }
 
+.venue {
+  line-height: 30px;
+}
+
 .button {
   border-width: 1.569px;
   border-color: rgb(224, 220, 224);
@@ -158,10 +167,10 @@ events-banner-container {
   width: 300px;
   /* padding-top: 10vh; */
 }
+
 .video {
   padding-top: 10.4vh;
 }
-
 
 @media (max-width: 768px) {
   .video-wrapper iframe {
@@ -205,4 +214,19 @@ events-banner-container {
 
 .music-video:hover {
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .events-container {
+    padding-top: 130px;
+  }
+  .events-banner {
+    padding-left: 8%;
+  }
+}
+
+@media (max-width: 575px) {
+  .events-banner {
+    padding-left: 0;
+  }
 }

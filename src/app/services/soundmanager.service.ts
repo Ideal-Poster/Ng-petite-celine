@@ -45,14 +45,13 @@ export class SoundManager {
   }
 
   activeHighlight(song) {
-    let tracks = document.getElementsByClassName("track"); // Array of tracks
+    const tracks = document.getElementsByClassName('track'); // Array of tracks
 
     Array.prototype.filter.call(tracks, function(tracks) {
-      tracks.classList.replace('active' ,'inactive');
+      tracks.classList.replace('active' , 'inactive');
     });
 
     tracks[song.index].classList.add('active');
-    console.log(song.index);
   }
 
   pause() {
@@ -72,18 +71,18 @@ export class SoundManager {
       }
     }
     else {
-      var song = this.playlistService.first();
+      const song = this.playlistService.first();
       this.play(song);
     }
   }
 
   next() {
-    var song = this.playlistService.next();
+    const song = this.playlistService.next();
     if (song) this.play(song);
   }
 
   previous() {
-    var song = this.playlistService.previous();
+    const song = this.playlistService.previous();
     if (song) {
       this.play(song);
     }
@@ -135,7 +134,7 @@ export class SoundManager {
   }
 
   onSongFinish() {
-    var nextSong = this.playlistService.next();
+    const nextSong = this.playlistService.next();
     if (nextSong) {
       this.play(nextSong);
     } else {
