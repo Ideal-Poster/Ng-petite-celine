@@ -16,15 +16,15 @@ import { Component, OnInit } from '@angular/core';
     <ul class="menu-buttons">
       <li class="music">
           <div class="nav-rectangle"></div>
-          <a routerLink="/" routerLinkActive="active" (click)="stopPlayer()">Music</a>
+          <a routerLink="/" routerLinkActive="active">Music</a>
       </li>
       <li class="art">
         <div class="nav-rectangle"></div>
-        <a routerLink="/art" routerLinkActive="active" (click)="stopPlayer()">Art</a>
+        <a routerLink="/art" routerLinkActive="active">Art</a>
       </li>
       <li class="acting">
         <div class="nav-rectangle"></div>
-        <a routerLink="/acting" routerLinkActive="active" (click)="stopPlayer()">Acting</a>
+        <a routerLink="/acting" routerLinkActive="active">Acting</a>
       </li>
     </ul>
 
@@ -104,26 +104,19 @@ export class NavMenuComponent implements OnInit {
           this.title = 'Celine';
           this.routeNumber = 0;
         } else {
-
           if (r.url['_value'][0].path === 'art') {
             this.title = 'Gallery';
             this.routeNumber = 1;
           } else {
             this.title = 'Actress';
             this.routeNumber = 2;
-
           }
-
         }
       });
   }
 
   ngOnInit() {
     this.rectangle(this.routeNumber);
-  }
-
-  stopPlayer() {
-    this.soundManager.pause();
   }
 
   rectangle(route) {
