@@ -1,6 +1,6 @@
 import { SoundManager } from './../services/soundmanager.service';
 import { ActivatedRoute } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-nav-menu',
   template: `
@@ -15,12 +15,15 @@ import { Component } from '@angular/core';
 
     <ul class="menu-buttons">
       <li class="music">
-        <a routerLink="/" routerLinkActive="active" (click)="stopPlayer()">Music</a>
+          <div class="nav-rectangle"></div>
+          <a routerLink="/" routerLinkActive="active" (click)="stopPlayer()">Music</a>
       </li>
       <li class="art">
+        <div class="nav-rectangle"></div>
         <a routerLink="/art" routerLinkActive="active" (click)="stopPlayer()">Art</a>
       </li>
       <li class="acting">
+        <div class="nav-rectangle"></div>
         <a routerLink="/acting" routerLinkActive="active" (click)="stopPlayer()">Acting</a>
       </li>
     </ul>
@@ -76,22 +79,62 @@ import { Component } from '@angular/core';
     ul.menu-buttons > li > *:hover {
       color: grey;
     }
+    .nav-rectangle {
+      position: relative;
+      display: inline-block;
+      background-color: rgb(85, 170, 160);
+      width: 8px;
+      height: 35px;
+      right: 35px;
+      top: 3px;
+      vertical-align: baseline;
+      margin-right: -5px;
+      // visibility: hidden;
+    }
   `]
 })
 
-export class NavMenuComponent {
+export class NavMenuComponent implements OnInit {
   title = 'Celine';
-  constructor(r: ActivatedRoute, private soundManager: SoundManager) {
+  routeNumber: number;
+
+  constructor(private r: ActivatedRoute, private soundManager: SoundManager) {
       r.params.subscribe(() => {
         if (r.url['_value'].length < 1) {
           this.title = 'Celine';
+          this.routeNumber = 0;
         } else {
-          r.url['_value'][0].path === 'art' ? this.title = 'Gallery' : this.title = 'Actress';
+
+          if (r.url['_value'][0].path === 'art') {
+            this.title = 'Gallery';
+            this.routeNumber = 1;
+          } else {
+            this.title = 'Actress';
+            this.routeNumber = 2;
+
+          }
+
         }
       });
+  }
+
+  ngOnInit() {
+    this.rectangle(this.routeNumber);
   }
 
   stopPlayer() {
     this.soundManager.pause();
   }
+
+  rectangle(route) {
+    let rectangles = document.getElementsByClassName('nav-rectangle');
+
+    Array.prototype.filter.call(rectangles, function(rectangles) {
+      rectangles.classList.add('invisible');
+    });
+
+    rectangles[route].classList.replace('invisible', 'visible');
+  }
+
+
 }
