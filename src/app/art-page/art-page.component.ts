@@ -4,7 +4,7 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
   template: `
 
     <div style="position: relative;">
-    <div class="poop"
+    <div class="poop d-none d-md-block"
       style="
       position: absolute;
       height: 100%;
@@ -36,7 +36,7 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 })
 
 export class ArtPageComponent {
-  title = 'Gallery';
+  title = 'Art';
   imagesBasic = [{
       img: 'https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg',
       thumb: 'https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg',

@@ -34,21 +34,12 @@ h2 {
   color: #75707a;
 }
 
-.album {
-  /* padding-top: 100px; */
-}
-
-.featured-video {
-  /* padding-right: 56px; */
-}
-
 .video {
   padding-top: 35px;
 }
 .buy-icon:hover {
   color: #7d7246;
 }
-
 
 .purchase-icons {
   margin-top: 60px;
@@ -172,7 +163,43 @@ events-banner-container {
   padding-top: 10.4vh;
 }
 
-@media (max-width: 768px) {
+.music-video {
+  opacity: 0.7;
+  background: rgb(105, 211, 176);
+}
+
+.music-video:hover {
+  opacity: 1;
+}
+
+/* @media (max-width: 767px) {
+  .events-container {
+    padding-top: 130px;
+  }
+  .events-banner {
+    padding-left: 8%;
+  }
+} */
+
+/* @media (max-width: 575px) {
+  .events-banner {
+    padding-left: 0;
+  }
+} */
+
+@media (max-width: 575.98px) {
+  .events-banner {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .events-container {
+    padding-top: 130px;
+  }
+  .events-banner {
+    padding-left: 8%;
+  }
   .video-wrapper iframe {
     width: 100%;
     height: 100%;
@@ -205,28 +232,14 @@ events-banner-container {
     margin-top: 5px;
     margin-left: 0px;
   }
+
 }
 
-.music-video {
-  opacity: 0.7;
-  background: rgb(105, 211, 176);
+@media (max-width: 991.98px) {
 }
 
-.music-video:hover {
-  opacity: 1;
-}
-
-@media (max-width: 767px) {
-  .events-container {
-    padding-top: 130px;
-  }
-  .events-banner {
-    padding-left: 8%;
-  }
-}
-
-@media (max-width: 575px) {
-  .events-banner {
-    padding-left: 0;
+@media (max-width: 1199.98px) {
+  .album-title, .video-title {
+    font-size: 38px;
   }
 }

@@ -1,9 +1,9 @@
 <div class="container" style="padding-bottom: 70px;">
   <div class="row">
-    <div class="col-sm-3" style="z-index: 2;">
+    <div class="col-md-3" style="z-index: 2;">
       <app-nav-menu></app-nav-menu>
     </div>
-    <div class="col-sm-9" style="z-index: 1; padding-top: 92px;">
+    <div class="col-md-9" style="z-index: 1; padding-top: 92px;">
       <div class="animated fadeIn" data-wow-duration="0.6s">
 
         <img *ngIf="mask1" (mouseover)="toggleMask(mask1, 1)" src="../../assets/images/celine-1-mask.png" class="img-fluid" alt="Responsive image">
@@ -28,21 +28,15 @@
     </div>
   </div>
 
-  <div class="row" style="margin-top: 60px;
-      height: 420px;
-      background: #71bcc2;">
-    <div class="box-extension" style="height: 420px;
-        background:#71bcc2;
-        width: 40vw;
-        position:absolute;
-        left: -10px;"></div>
-    <div class="offset-sm-2 col-sm-6 video float-lg-right wow fadeIn" style="padding-top: 50px;">
+  <div class="row reel-box">
+    <div class="box-extension"></div>
+    <div class="col-md-8 offset-lg-2 col-lg-6 video float-lg-right wow fadeIn" style="padding-top: 50px;">
       <div class="video-wrapper">
-        <iframe class="" src="https://www.youtube.com/embed/96ayQ3GsfrE?rel=0&mute=1&autoplay=1" frameborder="0" gesture="media"
+        <iframe class="" src="https://www.youtube.com/embed/96ayQ3GsfrE?rel=0?theme=light&color=white&mute=1&autoplay=1" frameborder="0" gesture="media"
           allow="encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="col-sm-2" style="height: 400px;">
+    <div class="col-sm-2 d-none d-md-block" style="height: 400px;">
       <h1 class="reel" style="
           margin-top: 120px;
           font-family: 'Cardo', serif;
@@ -53,9 +47,7 @@
 
     <div class="col-sm-2 align-bottom align-text-bottom">
       <a href="">
-        <div class="row align-text-bottom" style="width: 180px;
-                  position: absolute;
-                  bottom: 40px;">
+        <div class="row align-text-bottom download-link" style="">
 
           <p class="align-bottom align-left">Download Resume</p>&nbsp;&nbsp;
           <i class="fa fa-download float-right" style="font-size: 24px" aria-hidden="true"></i>

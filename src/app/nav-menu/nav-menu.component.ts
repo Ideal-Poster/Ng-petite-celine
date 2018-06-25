@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
       <p>
         Petite<br>
       </p>
-      <p style="margin-top: -14px;
-      z-index: 100;" class="fadeInDown animated" data-wow-duration="0.6s">{{ title }} </p>
+      <p style="
+        margin-top: -14px;
+        z-index: 10;"class="fadeInDown animated" data-wow-duration="0.6s">{{ title }} </p>
     </h1>
 
     <ul class="menu-buttons">
@@ -48,13 +49,14 @@ import { Component, OnInit } from '@angular/core';
   styles: [`
     :host {
       display: block;
-      z-index: 20;
+      z-index: 10;
     }
 
     ul.menu-buttons {
       font-size: 44px;
       line-height: 1.2;
       padding-bottom: 20px;
+      // padding-left: 60px;
     }
 
     .nav-icon {
@@ -88,9 +90,27 @@ import { Component, OnInit } from '@angular/core';
       right: 35px;
       top: 3px;
       vertical-align: baseline;
-      margin-right: -5px;
-      // visibility: hidden;
+      margin-right: -15px;
+
     }
+
+
+  @media (max-width: 575.98px) {
+
+  }
+  @media (max-width: 767.98px) {
+
+  }
+  @media (max-width: 991.98px) {
+  }
+  @media (max-width: 1199.98px) {
+    .header {
+      font-size: 94px;
+    }
+    ul.menu-buttons {
+      font-size: 40px;
+    }
+  }
   `]
 })
 
@@ -105,7 +125,7 @@ export class NavMenuComponent implements OnInit {
           this.routeNumber = 0;
         } else {
           if (r.url['_value'][0].path === 'art') {
-            this.title = 'Gallery';
+            this.title = 'Art';
             this.routeNumber = 1;
           } else {
             this.title = 'Actress';
