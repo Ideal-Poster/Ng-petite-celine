@@ -56,7 +56,6 @@ import { Component, OnInit } from '@angular/core';
       font-size: 44px;
       line-height: 1.2;
       padding-bottom: 20px;
-      // padding-left: 60px;
     }
 
     .nav-icon {
@@ -93,24 +92,17 @@ import { Component, OnInit } from '@angular/core';
       margin-right: -15px;
 
     }
-
-
-  @media (max-width: 575.98px) {
-
-  }
-  @media (max-width: 767.98px) {
-
-  }
-  @media (max-width: 991.98px) {
-  }
-  @media (max-width: 1199.98px) {
-    .header {
-      font-size: 94px;
+    @media (max-width: 575.98px) {}
+    @media (max-width: 767.98px) {}
+    @media (max-width: 991.98px) {}
+    @media (max-width: 1199.98px) {
+      .header {
+        font-size: 94px;
+      }
+      ul.menu-buttons {
+        font-size: 40px;
+      }
     }
-    ul.menu-buttons {
-      font-size: 40px;
-    }
-  }
   `]
 })
 
