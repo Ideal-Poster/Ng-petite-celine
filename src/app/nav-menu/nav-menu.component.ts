@@ -42,7 +42,8 @@ import { Component, OnInit } from '@angular/core';
     </div>
   </div>
 
-  <a href="mailto:petitecelineworld@gmail.com?Subject=Hello%20again" class="pl-4 pb-3 grey-text fixed-bottom" style="width:300px;">
+  <a href="mailto:petitecelineworld@gmail.com" class="pl-4 pt-3 d-none d-md-block" style="width:300px;"
+  style="color: #75707a; position:absolute; bottom: 0; left:-10px;">
     <p>petitecelineworld@gmail.com</p>
   </a>
   `,

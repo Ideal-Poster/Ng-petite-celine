@@ -4,15 +4,16 @@ import {SoundManager} from '../services/soundmanager.service';
 import {Song} from '../interfaces/song.model';
 import {Events} from '../interfaces/events.model';
 
-import { ControlsComponent } from './controls.component';
-import { VolumeComponent } from './volume.component';
+// import { ControlsComponent } from './controls.component';
+// import { VolumeComponent } from './volume.component';
 
-import { TimeSeekerComponent } from './time-seeker.component';
-import { TimeInfoComponent } from './time-info.component';
+// import { TimeSeekerComponent } from './time-seeker.component';
+// import { TimeInfoComponent } from './time-info.component';
 @Component({
   selector: 'player',
   template: `
-		<div class="container-fluid fixed-top player-background" [hidden]='!isPlaying && !isTouched'>
+		<div class="container-fluid fixed-bottom player-background" [hidden]='!isPlaying && !isTouched'>
+			<time-seeker [time]="currentTime" [total-time]="totalTime"></time-seeker>
 			<div class="container">
 				<section class="player" style="height:55px">
 					<div class="row">
@@ -28,7 +29,6 @@ import { TimeInfoComponent } from './time-info.component';
 					</div>
 				</section>
 			</div>
-			<time-seeker [time]="currentTime" [total-time]="totalTime"></time-seeker>
 		</div>
 	`,
   styles: [`

@@ -46,25 +46,16 @@ export class MusicPageComponent implements OnInit {
   onSubmit() {
 
     console.log(this.signupForm.value.userData);
-    this.signupForm.reset();
-    // const subscriber = new EmailSubscriber(this.subform.value.firstname, this.subform.value.latname, this.subform.value.email);
     this.http
-      .post<{ message: string }>('http://localhost:3000/emailSub', { id: 'null', title: 'title', content: 'content' })
+      .post<{ message: string }>('http://localhost:3000/emailSub', {
+        name: this.signupForm.value.userData.name,
+        email: this.signupForm.value.userData.email
+        }
+      )
       .subscribe(responseData => {
         console.log(responseData.message);
-        // this.posts.push(post);
-        // this.postsUpdated.next([...this.posts]);
       });
-    // .subscribe(response => {
-    //   if (response.result && response.result !== 'error') {
-    //     this.submitted = true;
-    //   } else {
-    //     this.error = response.msg;
-    //   }
-    // }, error => {
-    //   console.error(error);
-    //   this.error = 'Sorry, an error occurred.';
-    // });
+    this.signupForm.reset();
   }
 
 
