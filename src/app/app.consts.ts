@@ -1,5 +1,5 @@
 export const consts = {
-    baseUrl: 'http://looptube.net/soundcloud/'
+    baseUrl: 'https://looptube.net/soundcloud/'
 };
 
 export default consts;

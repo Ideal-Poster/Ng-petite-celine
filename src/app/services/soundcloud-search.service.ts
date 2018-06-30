@@ -9,7 +9,7 @@ import {Observable}     from 'rxjs/Observable';
 export class SoundCloudSearch implements ISearch {
 
   private clientId = '8e1349e63dfd43dc67a63e0de3befc68';
-  private playlistUri = 'http://api.soundcloud.com/playlists/50986230?linked_partitioning=1&client_id=' + this.clientId;
+  private playlistUri = 'https://api.soundcloud.com/playlists/50986230?linked_partitioning=1&client_id=' + this.clientId;
   constructor(private http: Http) {}
 
   search(keyword: string): any {
