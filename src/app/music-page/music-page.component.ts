@@ -47,7 +47,7 @@ export class MusicPageComponent implements OnInit {
 
     console.log(this.signupForm.value.userData);
     this.http
-      .post<{ message: string }>('https://floating-earth-31375.herokuapp.com/emailSub', {
+      .post<{ message: string }>('http://localhost:3000/emailSub', {
         name: this.signupForm.value.userData.name,
         email: this.signupForm.value.userData.email
         }
