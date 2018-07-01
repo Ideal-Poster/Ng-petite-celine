@@ -38,13 +38,13 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 export class ArtPageComponent {
   title = 'Art';
   imagesBasic = [{
-      img: 'https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg',
-      thumb: 'https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg',
+      img: 'https://images.pexels.com/photos/1195214/pexels-photo-1195214.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      thumb: 'https://images.pexels.com/photos/1195214/pexels-photo-1195214.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
       description: 'Image 1'
     },
     {
-      img: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
-      thumb: 'https://enviragallery.com/wp-content/uploads/2015/10/Icelandic_Roads_16.jpg',
+      img: 'https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      thumb: 'https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
       description: 'Image 2'
     },
     {
@@ -63,24 +63,19 @@ export class ArtPageComponent {
       description: 'Image 5'
     },
     {
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg',
-      thumb: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg',
+      img: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      thumb: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
       description: 'Image 6'
     },
     {
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg',
-      thumb: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg',
+      img: 'https://images.pexels.com/photos/414530/pexels-photo-414530.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      thumb: 'https://images.pexels.com/photos/414530/pexels-photo-414530.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
       description: 'Image 7'
     },
     {
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg',
-      thumb: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg',
+      img: 'https://images.pexels.com/photos/1039302/pexels-photo-1039302.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      thumb: 'https://images.pexels.com/photos/1039302/pexels-photo-1039302.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
       description: 'Image 8'
-    },
-    {
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg',
-      thumb: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg',
-      description: 'Image 9'
     }
   ];
 
