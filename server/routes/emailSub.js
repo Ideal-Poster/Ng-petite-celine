@@ -5,21 +5,25 @@ router.post('/', (req, res, next) => {
   var request = require("request");
 
   var options = { method: 'POST',
-    url: 'https://petiteceline.us17.list-manage.com/subscribe/post',
-    qs: { u: '4c131a3932ca2dd768c590f9b', 'amp;id': 'c760b1311e' },
+    url: 'https://us17.api.mailchimp.com/3.0/lists/c760b1311e/members',
     headers:
-     { 'Postman-Token': '77655193-3f8f-4032-9ab6-9231c22f20c5',
+     { 'Postman-Token': '984ef5a9-c8b5-47d6-9968-8cd28304f1d6',
        'Cache-Control': 'no-cache',
-       Authorization: 'Basic UGV0aXRlIENlbGluZTo5NGU1YzM2MzIxNmZiMTU3ZWZjZDgzNzk0ODcwZmE1YS11czE3',
-       'Content-Type': 'application/x-www-form-urlencoded',
-       'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' },
-    formData: { NAME: 'hellokitty', EMAIL: 'malcolmgourdine@gmail.com' } };
+       Authorization: 'Basic YW55c3RyaW5nOjk0ZTVjMzYzMjE2ZmIxNTdlZmNkODM3OTQ4NzBmYTVhLXVzMTc=',
+       'Content-Type': 'application/json' },
+    body:
+     { email_address: req.body.email,
+       status: 'subscribed',
+       merge_fields: { FNAME: req.body.name } },
+    json: true };
 
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
 
     console.log(body);
   });
+
+
 
 
   res.status(201).json({
