@@ -24,7 +24,7 @@ export class MailChimpApiService {
     subscriberData.append('name', 'slib');
     subscriberData.append('email', 'slib@jones');
 
-    return this.http.post<any>('http://localhost:3000/', { email: 'malcolm@gmail', name: 'poop' });
+    return this.http.post<any>('https://floating-earth-31375.herokuapp.com/', { email: 'malcolm@gmail', name: 'poop' });
   }
 
   addMember() {
