@@ -38,43 +38,43 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 export class ArtPageComponent {
   title = 'Art';
   imagesBasic = [{
-      img: 'https://images.pexels.com/photos/1195214/pexels-photo-1195214.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-      thumb: 'https://images.pexels.com/photos/1195214/pexels-photo-1195214.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      img: '../../assets/gallery-images/photo-1.JPG',
+      thumb: '../../assets/gallery-images/photo-1.JPG',
       description: 'Image 1'
     },
     {
-      img: 'https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-      thumb: 'https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      img: '../../assets/gallery-images/photo-2.JPG',
+      thumb: '../../assets/gallery-images/photo-2.JPG',
       description: 'Image 2'
     },
     {
-      img: 'https://images.freeimages.com/images/large-previews/476/chicago-night-traffic-1447010.jpg',
-      thumb: 'https://images.freeimages.com/images/large-previews/476/chicago-night-traffic-1447010.jpg',
+      img: '../../assets/gallery-images/photo-3.JPG',
+      thumb: '../../assets/gallery-images/photo-3.JPG',
       description: 'Image 3'
     },
     {
-      img: 'https://images.freeimages.com/images/large-previews/0d6/blue-flowers-with-macro-4-1400913.jpg',
-      thumb: 'https://images.freeimages.com/images/large-previews/0d6/blue-flowers-with-macro-4-1400913.jpg',
+      img: '../../assets/gallery-images/photo-4.JPG',
+      thumb: '../../assets/gallery-images/photo-4.JPG',
       description: 'Image 4'
     },
     {
-      img: 'https://images.freeimages.com/images/large-previews/3d3/droplets-1395002.jpg',
-      thumb: 'https://images.freeimages.com/images/large-previews/3d3/droplets-1395002.jpg',
+      img: '../../assets/gallery-images/photo-5.JPG',
+      thumb: '../../assets/gallery-images/photo-5.JPG',
       description: 'Image 5'
     },
     {
-      img: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-      thumb: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      img: '../../assets/gallery-images/photo-6.JPG',
+      thumb: '../../assets/gallery-images/photo-6.JPG',
       description: 'Image 6'
     },
     {
-      img: 'https://images.pexels.com/photos/414530/pexels-photo-414530.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-      thumb: 'https://images.pexels.com/photos/414530/pexels-photo-414530.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      img: '../../assets/gallery-images/photo-7.JPG',
+      thumb: '../../assets/gallery-images/photo-7.JPG',
       description: 'Image 7'
     },
     {
-      img: 'https://images.pexels.com/photos/1039302/pexels-photo-1039302.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-      thumb: 'https://images.pexels.com/photos/1039302/pexels-photo-1039302.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+      img: '../../assets/gallery-images/photo-8.JPG',
+      thumb: '../../assets/gallery-images/photo-8.JPG',
       description: 'Image 8'
     }
   ];

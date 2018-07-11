@@ -30,7 +30,6 @@
     "firebase": "^4.13.1",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
-    "ng-mdb-pro": "git+https://oauth2:UkVgW1esr64ozz7iqLci@git.mdbootstrap.com/mdb/angular/ng-pro.git",
     "ngx-cookie": "^3.0.1",
     "ngx-cookie-service": "^1.0.10",
     "rxjs": "^5.5.10",
