@@ -111,6 +111,10 @@ events-banner-container {
   margin-top: 34px;
   margin-left: 22px;
 }
+.button:hover > * {
+  color: black;
+
+}
 
 .button:hover {
   border-color: black;
@@ -125,6 +129,7 @@ events-banner-container {
   height: 8px;
   margin: auto;
   margin-top: -2px;
+  color: white;
 }
 
 .rectangle {

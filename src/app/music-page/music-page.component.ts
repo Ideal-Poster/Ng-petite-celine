@@ -11,6 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./music-page.component.css']
 })
 export class MusicPageComponent implements OnInit {
+
   // @ViewChild('autoShownModal') public autoShownModal: ModalDirective;
   @ViewChild('f') subform: NgForm;
 	error = '';
