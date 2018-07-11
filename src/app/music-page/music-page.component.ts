@@ -57,6 +57,7 @@ export class MusicPageComponent implements OnInit {
         console.log(responseData.message);
       });
     this.signupForm.reset();
+    this.isModalShown = false;
   }
 
 
