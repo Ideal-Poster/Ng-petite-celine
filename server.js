@@ -6,6 +6,10 @@ const app = express();
 
 const indexRouter = require('./server/routes/index');
 const emailSubRouter = require('./server/routes/emailSub');
+
+var favicon = require('serve-favicon');
+
+app.use(favicon(__dirname + '/src/favicon.ico'));
 // API file for interacting with MongoDB
 // const api = require('./server/routes/api');
 
