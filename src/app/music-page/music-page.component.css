@@ -218,7 +218,7 @@ events-banner-container {
     left: 0px;
   }
   .feat-content-row {
-    width: 300px;
+    width: 400px;
   }
   .events-banner {
     writing-mode: horizontal-tb;
@@ -254,6 +254,10 @@ events-banner-container {
   .album-title, .video-title {
     font-size: 38px;
   }
-}
 
-.cookie-modal {}
+}
+@media (min-width: 1200px) {
+  .video-title {
+  margin-top: -40px;
+  }
+}
