@@ -39,13 +39,13 @@ export class ArtPageComponent {
   title = 'Art';
   imagesBasic = [
     {
-      img: '../../assets/gallery-images/Eclipse - Light.jpg',
-      thumb: '../../assets/gallery-images/Eclipse - Light.jpg',
+      img: '../../assets/gallery-images/Eclipse - Light.png',
+      thumb: '../../assets/gallery-images/Eclipse - Light.png',
       description: 'Image 1'
     },
     {
-      img: '../../assets/gallery-images/Eclipse.jpg',
-      thumb: '../../assets/gallery-images/Eclipse.jpg',
+      img: '../../assets/gallery-images/Eclipse.png',
+      thumb: '../../assets/gallery-images/Eclipse.png',
       description: 'Image 2'
     },
     {
