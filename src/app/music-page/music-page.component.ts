@@ -48,7 +48,7 @@ export class MusicPageComponent implements OnInit {
 
     console.log(this.signupForm.value.userData);
     this.http
-      .post<{ message: string }>('https://petite-celine.herokuapp.com/', {
+      .post<{ message: string }>('https://petite-celine.herokuapp.com/emailSub', {
         name: this.signupForm.value.userData.name,
         email: this.signupForm.value.userData.email
         }
