@@ -39,126 +39,125 @@ export class ArtPageComponent {
   title = 'Art';
   imagesBasic = [
     {
-      img: 'https://preview.ibb.co/eA4E4J/Eclipse_Light.jpg',
-      thumb: 'https://preview.ibb.co/eA4E4J/Eclipse_Light.jpg',
+      img: '../../assets/gallery-images/Eclipse - Light.jpg',
+      thumb: '../../assets/gallery-images/Eclipse - Light.jpg',
       description: 'Image 1'
     },
     {
-      img: 'https://preview.ibb.co/dBpgjJ/Eclipse.jpg',
-      thumb: 'https://preview.ibb.co/dBpgjJ/Eclipse.jpg',
+      img: '../../assets/gallery-images/Eclipse.jpg',
+      thumb: '../../assets/gallery-images/Eclipse.jpg',
       description: 'Image 2'
     },
     {
-      img: 'https://preview.ibb.co/iY6iyd/Tulips_Light.jpg',
-      thumb: 'https://preview.ibb.co/iY6iyd/Tulips_Light.jpg',
+      img: '../../assets/gallery-images/Green Invasion - Light Only.jpg',
+      thumb: '../../assets/gallery-images/Green Invasion - Light Only.jpg',
       description: 'Image 3'
     },
     {
-      img: 'https://preview.ibb.co/cpT7PJ/Tulips.jpg',
-      thumb: 'https://preview.ibb.co/cpT7PJ/Tulips.jpg',
+      img: '../../assets/gallery-images/Green Invasion - Light.jpg',
+      thumb: '../../assets/gallery-images/Green Invasion - Light.jpg',
       description: 'Image 4'
     },
     {
-      img: 'https://preview.ibb.co/fgqXry/Tulips_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/fgqXry/Tulips_Light_Only.jpg',
+      img: '../../assets/gallery-images/Green Invasion.jpg',
+      thumb: '../../assets/gallery-images/Green Invasion.jpg',
       description: 'Image 5'
     },
     {
-      img: 'https://preview.ibb.co/nqwNry/Portal.jpg',
-      thumb: 'https://preview.ibb.co/nqwNry/Portal.jpg',
+      img: '../../assets/gallery-images/GypsyLynx - Light Only.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx - Light Only.jpg',
       description: 'Image 6'
     },
     {
-      img: 'https://preview.ibb.co/gTFRJd/Portal_Light.jpg',
-      thumb: 'https://preview.ibb.co/gTFRJd/Portal_Light.jpg',
+      img: '../../assets/gallery-images/GypsyLynx - Light.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx - Light.jpg',
       description: 'Image 7'
     },
     {
-      img: 'https://preview.ibb.co/iS544J/Portal_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/iS544J/Portal_Light_Only.jpg',
+      img: '../../assets/gallery-images/GypsyLynx in Smoke -Light.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx in Smoke -Light.jpg',
       description: 'Image 8'
     },
     {
-      img: 'https://preview.ibb.co/dG8fdd/Healing_Hands.jpg',
-      thumb: 'https://preview.ibb.co/dG8fdd/Healing_Hands.jpg',
+      img: '../../assets/gallery-images/GypsyLynx in Smoke- Light Only.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx in Smoke- Light Only.jpg',
       description: 'Image 9'
     },
     {
-      img: 'https://preview.ibb.co/j4GYyd/Healing_Hands_Light.jpg',
-      thumb: 'https://preview.ibb.co/j4GYyd/Healing_Hands_Light.jpg',
+      img: '../../assets/gallery-images/GypsyLynx in Smoke.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx in Smoke.jpg',
       description: 'Image 10'
     },
+       {
+      img: '../../assets/gallery-images/GypsyLynx in Space - Light Only.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx in Space - Light Only.jpg',
+      description: 'Image 11'
+    },
     {
-      img: 'https://preview.ibb.co/b3ofdd/Healing_Hands_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/b3ofdd/Healing_Hands_Light_Only.jpg',
-      description: 'Image  11'
+      img: '../../assets/gallery-images/GypsyLynx in Space - Light.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx in Space - Light.jpg',
+      description: 'Image 12'
+    },
+    {
+      img: '../../assets/gallery-images/GypsyLynx in Space.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx in Space.jpg',
+      description: 'Image 13'
+    },
+    {
+      img: '../../assets/gallery-images/GypsyLynx.jpg',
+      thumb: '../../assets/gallery-images/GypsyLynx.jpg',
+      description: 'Image 14'
+    },
+    {
+      img: '../../assets/gallery-images/Healing Hands - Glow Only.jpg',
+      thumb: '../../assets/gallery-images/Healing Hands - Glow Only.jpg',
+      description: 'Image 15'
+    },
+    {
+      img: '../../assets/gallery-images/Healing Hands - Light Only.jpg',
+      thumb: '../../assets/gallery-images/Healing Hands - Light Only.jpg',
+      description: 'Image 16'
     },
        {
-      img: 'https://preview.ibb.co/nDcTWy/Healing_Hands_Glow_Only.jpg',
-      thumb: 'https://preview.ibb.co/nDcTWy/Healing_Hands_Glow_Only.jpg',
-      description: 'Image  12'
+      img: '../../assets/gallery-images/Healing Hands - Light.jpg',
+      thumb: '../../assets/gallery-images/Healing Hands - Light.jpg',
+      description: 'Image 17'
     },
     {
-      img: 'https://preview.ibb.co/ewnHPJ/Gypsy_Lynx.jpg',
-      thumb: 'https://preview.ibb.co/ewnHPJ/Gypsy_Lynx.jpg',
-      description: 'Image  13'
+      img: '../../assets/gallery-images/Healing Hands.jpg',
+      thumb: '../../assets/gallery-images/Healing Hands.jpg',
+      description: 'Image 18'
     },
     {
-      img: 'https://preview.ibb.co/gi2TWy/Gypsy_Lynx_in_Space.jpg',
-      thumb: 'https://preview.ibb.co/gi2TWy/Gypsy_Lynx_in_Space.jpg',
-      description: 'Image  14'
+      img: '../../assets/gallery-images/Portal - Light Only.jpg',
+      thumb: '../../assets/gallery-images/Portal - Light Only.jpg',
+      description: 'Image 19'
     },
     {
-      img: 'https://preview.ibb.co/eYu8Wy/Gypsy_Lynx_in_Space_Light.jpg',
-      thumb: 'https://preview.ibb.co/eYu8Wy/Gypsy_Lynx_in_Space_Light.jpg',
-      description: 'Image  15'
+      img: '../../assets/gallery-images/Portal - Light.jpg',
+      thumb: '../../assets/gallery-images/Portal - Light.jpg',
+      description: 'Image 20'
     },
     {
-      img: 'https://preview.ibb.co/mkpxPJ/Gypsy_Lynx_in_Space_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/mkpxPJ/Gypsy_Lynx_in_Space_Light_Only.jpg',
-      description: 'Image  16'
-    },
-    {
-      img: 'https://preview.ibb.co/dEatyd/Gypsy_Lynx_in_Smoke.jpg',
-      thumb: 'https://preview.ibb.co/dEatyd/Gypsy_Lynx_in_Smoke.jpg',
-      description: 'Image  17'
+      img: '../../assets/gallery-images/Portal.jpg',
+      thumb: '../../assets/gallery-images/Portal.jpg',
+      description: 'Image 21'
     },
        {
-      img: 'https://preview.ibb.co/ntsHPJ/Gypsy_Lynx_in_Smoke_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/ntsHPJ/Gypsy_Lynx_in_Smoke_Light_Only.jpg',
-      description: 'Image  18'
+      img: '../../assets/gallery-images/Tulips - Light Only_.jpg',
+      thumb: '../../assets/gallery-images/Tulips - Light Only_.jpg',
+      description: 'Image 22'
     },
     {
-      img: 'https://preview.ibb.co/dh1Nry/Gypsy_Lynx_in_Smoke_Light.jpg',
-      thumb: 'https://preview.ibb.co/dh1Nry/Gypsy_Lynx_in_Smoke_Light.jpg',
-      description: 'Image  19'
+      img: '../../assets/gallery-images/Tulips - Light.jpg',
+      thumb: '../../assets/gallery-images/Tulips - Light.jpg',
+      description: 'Image 23'
     },
     {
-      img: 'https://preview.ibb.co/h8EaBy/Gypsy_Lynx_Light.jpg',
-      thumb: 'https://preview.ibb.co/h8EaBy/Gypsy_Lynx_Light.jpg',
-      description: 'Image  20'
+      img: '../../assets/gallery-images/Tulips.jpg',
+      thumb: '../../assets/gallery-images/Tulips.jpg',
+      description: 'Image 24'
     },
-    {
-      img: 'https://preview.ibb.co/mBN1jJ/Gypsy_Lynx_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/mBN1jJ/Gypsy_Lynx_Light_Only.jpg',
-      description: 'Image  21'
-    },
-    {
-      img: 'https://preview.ibb.co/idhZ4J/Green_Invasion.jpg',
-      thumb: 'https://preview.ibb.co/idhZ4J/Green_Invasion.jpg',
-      description: 'Image  22'
-    },
-    {
-      img: 'https://preview.ibb.co/faHHPJ/Green_Invasion_Light.jpg',
-      thumb: 'https://preview.ibb.co/faHHPJ/Green_Invasion_Light.jpg',
-      description: 'Image  23'
-    },
-      {
-      img: 'https://preview.ibb.co/h8c1jJ/Green_Invasion_Light_Only.jpg',
-      thumb: 'https://preview.ibb.co/h8c1jJ/Green_Invasion_Light_Only.jpg',
-      description: 'Image  24'
-    }
-
   ];
 
   @ViewChild('lightbox') public el: any;

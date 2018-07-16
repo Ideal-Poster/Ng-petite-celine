@@ -113,12 +113,14 @@ mdb-image-modal {
             width: 100%;
           }
         }
-        @media (min-width: 767px) {
-          img {
-            height: 100%;
-          }
-        }
+        // @media (min-width: 767px) {
+        //   img {
+        //     height: 100%;
+        //   }
+        // }
         img {
+          // height: 100%;
+
           &.smooth {
             transition: 0.2s;
           }
