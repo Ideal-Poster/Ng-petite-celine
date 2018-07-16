@@ -110,11 +110,15 @@ mdb-image-modal {
       > {
         @media (max-width: 767px) {
           img {
-            max-width: 100vw;
+            width: 100%;
+          }
+        }
+        @media (min-width: 767px) {
+          img {
+            height: 100%;
           }
         }
         img {
-          height: 100%;
           &.smooth {
             transition: 0.2s;
           }
