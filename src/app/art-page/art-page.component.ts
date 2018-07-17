@@ -38,74 +38,75 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 export class ArtPageComponent {
   title = 'Art';
   imagesBasic = [
-    {
-      img: '../../assets/gallery-images/Eclipse - Light.png',
-      thumb: '../../assets/gallery-images/Eclipse - Light.png',
-      description: 'Image 1'
-    },
-    {
-      img: '../../assets/gallery-images/Eclipse.png',
-      thumb: '../../assets/gallery-images/Eclipse.png',
-      description: 'Image 2'
-    },
+
     {
       img: '../../assets/gallery-images/Green Invasion - Light Only.jpg',
       thumb: '../../assets/gallery-images/Green Invasion - Light Only.jpg',
-      description: 'Image 3'
+      description: 'Image 1'
     },
     {
       img: '../../assets/gallery-images/Green Invasion - Light.jpg',
       thumb: '../../assets/gallery-images/Green Invasion - Light.jpg',
-      description: 'Image 4'
+      description: 'Image 2'
     },
     {
       img: '../../assets/gallery-images/Green Invasion.jpg',
       thumb: '../../assets/gallery-images/Green Invasion.jpg',
-      description: 'Image 5'
+      description: 'Image 3'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx - Light Only.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx - Light Only.jpg',
-      description: 'Image 6'
+      description: 'Image 4'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx - Light.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx - Light.jpg',
-      description: 'Image 7'
+      description: 'Image 5'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx in Smoke -Light.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx in Smoke -Light.jpg',
-      description: 'Image 8'
+      description: 'Image 6'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx in Smoke- Light Only.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx in Smoke- Light Only.jpg',
-      description: 'Image 9'
+      description: 'Image 7'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx in Smoke.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx in Smoke.jpg',
-      description: 'Image 10'
+      description: 'Image 8'
     },
        {
       img: '../../assets/gallery-images/GypsyLynx in Space - Light Only.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx in Space - Light Only.jpg',
-      description: 'Image 11'
+      description: 'Image 9'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx in Space - Light.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx in Space - Light.jpg',
-      description: 'Image 12'
+      description: 'Image 10'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx in Space.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx in Space.jpg',
-      description: 'Image 13'
+      description: 'Image 11'
     },
     {
       img: '../../assets/gallery-images/GypsyLynx.jpg',
       thumb: '../../assets/gallery-images/GypsyLynx.jpg',
+      description: 'Image 12'
+    },
+    {
+      img: '../../assets/gallery-images/Eclipse - Light.png',
+      thumb: '../../assets/gallery-images/Eclipse - Light.png',
+      description: 'Image 13'
+    },
+    {
+      img: '../../assets/gallery-images/Eclipse.png',
+      thumb: '../../assets/gallery-images/Eclipse.png',
       description: 'Image 14'
     },
     {
