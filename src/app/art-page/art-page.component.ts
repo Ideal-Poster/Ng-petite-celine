@@ -20,10 +20,12 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
           </div>
 
           <div class="col-md-8 wow fadeIn"style="padding-top: 13.75vh;">
-            <a href="https://www.etsy.com/shop/GypsyLynx"
-            target="_blank"
-            class="btn-lg purple-gradient waves-light etsy-button mb-2"
-            mdbWavesEffect>Etsy Store</a>
+            <div style="height: 50px;">
+              <a href="https://www.etsy.com/shop/GypsyLynx"
+              target="_blank"
+              class="btn-lg purple-gradient waves-light etsy-button"
+              mdbWavesEffect>Etsy Store</a>
+            </div>
             <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
           </div>
         </div>
@@ -38,10 +40,11 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
     }
     .etsy-button {
       margin-left: 10px;
-      position: relative;
+      // position: relative;
       // top: -10px;
-      // height: 50px;
+      max-height: 50px;
       color: white;
+      margin-bottom: 0px;
     }
   `]
 })
