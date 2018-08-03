@@ -52,12 +52,14 @@ h2 {
 }
 
 .purchase-icons>p {
-  font-size: 16px;
+  font-size: 18px;
   padding-right: 15px;
+  padding-top: 2px;
 }
 
 .purchase-icons>.icons>* {
   margin-right: 10px;
+  font-size: 20px;
 }
 
 .purchase-icons>p,
@@ -257,7 +259,7 @@ events-banner-container {
 
 }
 @media (min-width: 1200px) {
-  .video-title {
+  /* .video-title {
   margin-top: -40px;
-  }
+  } */
 }

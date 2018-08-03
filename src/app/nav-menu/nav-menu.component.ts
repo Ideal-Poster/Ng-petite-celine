@@ -61,7 +61,7 @@ import { Component, OnInit } from '@angular/core';
 
     .nav-icon {
       color: #a4955c;
-      font-size: 20px;
+      font-size: 20.5px;
       margin-right: 20px;
       margin-bottom: 100px;
     }
