@@ -113,6 +113,7 @@ events-banner-container {
   margin-top: 34px;
   margin-left: 22px;
 }
+
 .button:hover > * {
   color: black;
 
@@ -126,12 +127,15 @@ events-banner-container {
 }
 
 .tickets {
+  /* position: relative; */
   font-size: 22px;
-  width: 67px;
+  /* width: 80px; */
+  display: flex;
   height: 8px;
-  margin: auto;
   margin-top: -2px;
+  margin-left: -3px;
   color: white;
+  text-align: right;
 }
 
 .rectangle {
