@@ -133,7 +133,7 @@ events-banner-container {
   display: flex;
   height: 8px;
   margin-top: -2px;
-  margin-left: -3px;
+  margin-left: -2px;
   color: white;
   text-align: right;
 }
@@ -224,7 +224,7 @@ events-banner-container {
     left: 0px;
   }
   .feat-content-row {
-    width: 400px;
+    /* width: 400px; */
   }
   .events-banner {
     writing-mode: horizontal-tb;

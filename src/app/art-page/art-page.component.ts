@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 @Component({
   selector: 'app-art-page',
   template: `
-
+    <div class="background-color"></div>
     <div style="position: relative;">
     <div class="poop d-none d-md-block"
       style="
@@ -33,15 +33,19 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
     </div>
   `,
   styles: [`
-    :host {
-      display: block;
+
+    .background-color {
+      margin-top: -150px;
+      padding-top: 1500px;
+      z-index: -83;
+      // display: block;
+      position: fixed;
       background: #1c1820;
-      min-height: 100vh;
+      min-width: 100vw;
+      min-height: 120vh;
     }
     .etsy-button {
       margin-left: 10px;
-      // position: relative;
-      // top: -10px;
       max-height: 50px;
       color: white;
       margin-bottom: 0px;
