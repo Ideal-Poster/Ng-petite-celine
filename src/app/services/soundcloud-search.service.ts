@@ -81,12 +81,6 @@ export class SoundCloudSearch implements ISearch {
   search(keyword: string): any {
     const uri = this.playlistUri;
 
-
-    // console.log(
-    //   this.http.get(uri)
-    // .map(res => this.handleResponse(res))
-    // );
-
     return this.http.get(uri)
       .map(res => this.handleResponse(res));
   }
