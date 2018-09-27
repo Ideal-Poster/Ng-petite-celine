@@ -26,7 +26,7 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
               class="btn-lg purple-gradient waves-light etsy-button"
               mdbWavesEffect>Etsy Store</a>
             </div>
-            <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
+            <mdb-image-modal [modalImages]="imagesBasic" #lightbox type="margin"></mdb-image-modal>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
       margin-top: -150px;
       padding-top: 1500px;
       z-index: -83;
-      // display: block;
+      display: inline-block;
       position: fixed;
       background: #1c1820;
       min-width: 100vw;
