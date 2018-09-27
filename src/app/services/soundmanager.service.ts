@@ -21,6 +21,7 @@ export class SoundManager {
   }
 
   play(song: Song) {
+    this.pause();
     // this.playlistService.add(song); // Auto add song to playlist
     this.playlistService.setIndexBySong(song);
     this.currentSong = song;
@@ -39,9 +40,7 @@ export class SoundManager {
         alert(e.message);
       }
     });
-
     this.activeHighlight(song);
-
   }
 
   activeHighlight(song) {

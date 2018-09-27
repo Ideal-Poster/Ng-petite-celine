@@ -24,6 +24,7 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "amplitudejs": "^3.3.1",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.6",
     "easy-pie-chart": "^2.1.7",

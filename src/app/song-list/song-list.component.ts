@@ -44,6 +44,7 @@ export class SongListComponent implements OnInit {
   private searchClient: ISearch;
   searchResult: any = [];
   data: Array < any > ;
+  // prevSong: Song;
   // lastSongPlayed: number;
 
   constructor(private playlistService: PlaylistService, private soundCloudSearch: SoundCloudSearch, private soundManager: SoundManager) {
@@ -69,19 +70,14 @@ export class SongListComponent implements OnInit {
   }
 
   play(song: Song) {
-    this.soundManager.play(song);
-    // let tracks = document.getElementsByClassName("track"); // Array of tracks
+    console.log(this.soundManager.getCurrentSong);
 
-    // Array.prototype.filter.call(tracks, function(tracks) {
-    //   tracks.classList.replace('active' ,'inactive');
-    // });
+    // if (!this.prevSong || this.prevSong.name !== song.name) {
+      this.soundManager.play(song);
+    // }
 
-    // tracks[song.index].classList.add('active');
-    // console.log(song.index);
 
-    // var testTarget = parentDOM.getElementsByClassName("track")[4]; // here , this element is target
-    // console.log(testTarget); // <p class="test">hello word2</p>
-
+    // this.prevSong = song;
   }
 
   search(keyword: string) {
