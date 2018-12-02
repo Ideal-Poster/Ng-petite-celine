@@ -5,14 +5,11 @@
     </div>
     <div class="col-md-9" style="z-index: 1; padding-top: 92px;">
       <div class="animated fadeIn" data-wow-duration="0.6s">
+        <div style="min-height: 100%;">
+          <img *ngIf="mask1" (mouseover)="toggleMask(mask1, 1)" src="../../assets/images/celine-1-mask.png" class="img-fluid" alt="Responsive image">
+          <img [hidden]="mask1" (mouseleave)="toggleMask(mask1, 1)" src="../../assets/images/celine-1.png" class="img-fluid" alt="Responsive image">
+        </div>
 
-        <img *ngIf="mask1" (mouseover)="toggleMask(mask1, 1)" src="../../assets/images/celine-1-mask.png" class="img-fluid" alt="Responsive image">
-        <img [hidden]="mask1" (mouseleave)="toggleMask(mask1, 1)" src="../../assets/images/celine-1.png" class="img-fluid" alt="Responsive image">
-
-        <a class="btn-floating btn-lg purple-gradient waves-light pt-3 text-center wow rotateIn" style="position: absolute; top:140px; right: -26px"
-          type="button" data-toggle="modal" data-target="#basicExample" (click)="resumeModal.show()" mdbWavesEffect>
-          <p>Bio</p>
-        </a>
 
         <img *ngIf="mask2" (mouseover)="toggleMask(mask2, 2)" src="../../assets/images/celine-2-mask.png" class="img-fluid" alt="Responsive image"
           style="max-width: 50%;">
@@ -23,7 +20,20 @@
           alt="Responsive image" style="max-width: 50%;">
         <img [hidden]="mask3" (mouseleave)="toggleMask(mask3, 3)" src="../../assets/images/celine-3.png" class="img-fluid float-right"
           alt="Responsive image" style="max-width: 50%;">
-      </div>
+
+        </div>
+        <a type="button" mdbBtn color="default" class="btn-floating btn-lg purple-gradient waves-light pt-3 text-center wow rotateIn"
+        mdbPopover="Celine's first love was film. She began her career as an actress at age 6,
+        and became a member of SAG in 2002. Celine's work can be seen in feature films
+        (such as, Spielberg’s “Catch Me if You Can” and Eastwood’s “Mystic River”),
+        commercials, and TV, as well as work voice overs and indie films.
+        Celine graduated from Pace University in NYC with a BFA in Acting.
+        She also taught weekly Improvisational Acting classes at The Door High School in Manhattan."
+        placement="left"
+        style="position: absolute; top:140px; right: -26px"
+        mdbPopoverHeader="Popover on top" mdbWavesEffect>
+        Bio
+      </a>
 
     </div>
   </div>
@@ -54,29 +64,3 @@
   </div>
 </div>
 
-<div mdbModal #resumeModal="mdb-modal" [config]="{backdrop:false}" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title w-100" id="myModalLabel">Bio</h4>
-
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="resumeModal.hide()">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <p style="color: black">Celine's first love was film. She began her career as an actress at age 6,
-              and became a member of SAG in 2002. Celine's work can be seen in feature films
-              (such as, Spielberg’s “Catch Me if You Can” and Eastwood’s “Mystic River”),
-              commercials, and TV, as well as work voice overs and indie films.
-              Celine graduated from Pace University in NYC with a BFA in Acting.
-              She also taught weekly Improvisational Acting classes at The Door High School in Manhattan.
-          </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm waves-light" data-dismiss="modal" (click)="resumeModal.hide()" mdbWavesEffect>Close</button>
-      </div>
-    </div>
-  </div>
-</div>
